@@ -1,1 +1,6 @@
-
+ol {
+  list-style: none;
+}
+ol li {
+  display: inline-block;
+}

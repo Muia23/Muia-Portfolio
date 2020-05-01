@@ -4,9 +4,22 @@ ol {
 ol li {
   display: inline-block;
 }
+body{
+  background-image: url("/home/willy/Desktop/Portfolio/images/background3.jpg");
+  background-size: inherit;
+  background-repeat: no-repeat;
+}
 img{
   width: 200px;
   height: 200px;
   object-fit: cover;
   border-radius: 50%;
+}
+.container {
+  margin: 0;
+  position: fixed;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  border: 3px solid green
 }

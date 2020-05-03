@@ -1,60 +1,94 @@
-
-ul{
-  list-style: none;
-}
-body{
-  background-image: url("/home/willy/Desktop/Portfolio/images/background1.jpg");
+body {
+  background-image: url("/home/willy/Desktop/Portfolio/images/background.jpg");
   background-size: inherit;
   background-repeat: no-repeat;
 }
-.avatar img{
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-}
 .container-fluid {
-  background-color: rgba(158, 150, 150, 0.7);
+  background-color: rgba(158, 150, 150, 0.4);
   font-st
   margin: 0;
   position: fixed;
   top: 50%;
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  padding-top: 70px;
-  padding-bottom: 70px;
+  padding-top: 40px;
+  padding-bottom: 40px;
 }
-.footer{
+/* Profile area */
+.profile{
+  margin: auto;
+  text-align: center;
+}
+.avatar img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+h1 {
+font-family: georgia;
+font-weight: bold;
+font-size: 35px;
+}
+h2 {
+font-family: courier;
+font-size: 15px;
+font-weight: lighter;
+color: white;
+}
+ul {
+  list-style: none;
+}
+/*About me area*/
+.about {
+  float: right;
+  font-family: Impact, Charcoal, sans-serif;
+  color: white;
+  font-size: 19px;
+}
+h3 {
+  font-size: 30px;
+}
+.about span{
+  color: green;
+}
+.about a {
+  font-weight: lighter;
+  color: pink;
+}
+/*Projects area*/
+.project{
+  float: left;
+}
+h4 {
+  font-size: 18px;
+  color: white;
+}
+.project p {
+  font-family: Impact, Charcoal, sans-serif;
+  color: white;
+  font-size: 15px;
+}
+.project a {
+  font-family:serif;
+  font-weight: bold;
+  font-size: 25px;
+  color: blue;
+}
+/*Contacts area*/
+.footer {
   position: fixed;
   bottom:0;
   width:100%;
-  height:100px;   /* Height of the footer */
+  height:100px;
   background:rgba(27, 27, 27, 0.9);
 }
-.profile{
-  text-align: center;
-}
-.profile h3{
-font-family: georgia;
-font-size: 30px;
-}
-.profile h7{
-font-family: courier;
-}
-.about {
-  font-family: Impact, Charcoal, sans-serif;
-  color: white;
-  font-size: 18px;
-}
-h6 {
-  color: blue;
-}
-.contacts{
+.contacts {
   text-align: center;
 }
 .contacts p {
   font-family: bookman;
-  font-size: 30px;
+  font-size: 25px;
   color: white;
 }
 .contact ol {
@@ -66,8 +100,8 @@ h6 {
   margin: 0 0 12px 3px;
   font-family: bookman;
   font-size: 20px;
-  color: white;
+  color: rgba(194, 194, 194, 1);
 }
-.contact i{
+.contact i {
   font-size: 40px;
 }

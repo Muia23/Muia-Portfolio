@@ -1,5 +1,7 @@
 body {
-  background-color: black;
+  background-image: url("/images/background.jpg");
+  background-size: inherit;
+  background-repeat: no-repeat;
 }
 .container-fluid {
   background-color: rgba(158, 150, 150, 0.4);

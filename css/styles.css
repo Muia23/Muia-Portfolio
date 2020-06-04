@@ -16,7 +16,6 @@ body {
   color: rgba(255, 255, 255, 0.9);
 }
 
-
 .hero {
   position: relative;
   background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.urbacolors.com/photo/5a2d91fdd458f90375c5d702/download");
@@ -29,6 +28,49 @@ body {
   overflow: hidden;
 }
 
+.waves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80vh;
+  background-color: var(--color);
+  box-shadow: inset 0 0 100px rgba(0, 0, 0, 0.5);
+  transition: 500ms;
+}
+
+.waves::before,
+.waves::after {
+  content: '';
+  position: absolute;
+  width: 300vw;
+  height: 400vw;
+  top: -65vw;
+  left: 50%;
+  transform: translate(-50%, -75%);
+}
+
+.waves::before {
+  border-radius: 44%;
+  background: rgba(101, 30, 45, 0.5);
+  animation: waves 8s linear infinite;
+}
+
+.waves::after {
+  border-radius: 44%;
+  background: rgba(101, 30, 45, 0.2);
+  animation: waves 15s linear infinite;
+}
+
+@keyframes waves {
+  0% {
+    transform: translate(-50%, -75%) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(-50%, -75%) rotate(360deg);
+  }
+}
 /* ========================= */
 /* Profile area */
 .profile{

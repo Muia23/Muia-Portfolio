@@ -2,16 +2,34 @@ body {
   heigth:100%;
   background-color:#101010 ;
 }
-.container-fluid {
-  background-color: rgba(158, 150, 150, 0.4);
-  margin: 0;
-  position: fixed;
-  top: 50%;
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
-  padding-top: 40px;
-  padding-bottom: 40px;
+
+/* Hero section */
+.hero-text {
+  max-width: 500px;
+  margin: 0 auto;
+  padding-top: 20px;
+  text-align: center;
+  position: relative;
+  color: white;
+  position: relative;
+  z-index: 1;
+  color: rgba(255, 255, 255, 0.9);
 }
+
+
+.hero {
+  position: relative;
+  background-image:linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://www.urbacolors.com/photo/5a2d91fdd458f90375c5d702/download");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* ========================= */
 /* Profile area */
 .profile{
   margin: auto;

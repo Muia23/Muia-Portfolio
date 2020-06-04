@@ -28,6 +28,32 @@ body {
   overflow: hidden;
 }
 
+/* Profile area */
+.profile{
+  margin: auto;
+  text-align: center;20
+}
+.avatar img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+h1 {
+font-family: georgia;
+font-weight: bold;
+font-size: 35px;
+}
+h2 {
+font-family: courier;
+font-size: 15px;
+font-weight: lighter;
+color: white;
+}
+ul {
+  list-style: none;
+}
+
 .waves {
   position: absolute;
   bottom: 0;

@@ -1,0 +1,53 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title> Muia | Portfolio</title>    
+    </head>
+    <body>
+        <div class="container-fluid" style="height:30vh; padding: 20px; background-color: lightblue;">
+            <p style="text-align:right;">{{date|date:"l d-F Y"}}</p>        
+            <h2 style="text-align:center;">I am Wilfred</h2>
+            <br>
+            <h6 style="text-align:center;"> and I'm a fulstack developer</h6>
+        </div>
+        <div class="container">
+            <div class="row"  style="height: 10vh;">
+                <div class="col" style="background-color: lightblue; padding: 15px;">
+                    <h2 style="text-align: center;">About Me</h2>
+                </div>
+                <div class="col" style="background-color: lightgreen; padding: 15px;">
+                    <h2 style="text-align: center;">Projects</h2>
+                </div>                
+            </div>        
+        </div>
+        <div class="container" style="background-color: lightblue; padding: 25px 50px; text-align: center; height:56vh;"> 
+            <div class="container" style="max-height:50vh; overflow-y: scroll;">
+                <p>
+                    My name is Wilfred Muema, an enthusiastic fullstack developer based in Nairobi, Kenya. 
+                    I am proficient in both front-end and back-end programming. 
+                     But with my keenness to details and user experience makes me incline to front-end development.                
+                </p>
+                <p>
+                    I am good at making application and websites, using core web fundamentals: HTML 5, CSS and material design concepts like Bootstrap. 
+                    Also conversant with object-oriented scripting languages: Javascript, Typescript that require constant update with the new releases. 
+                    Coming to backend, where the magic happens. I am clinical with python since it is vast and universally used. 
+                    With database, I am adept in database management i.e designing and manipualting queries
+                </p>
+                <p>
+                    For a personal goal, I would like to be able to innovate and boost the Kenyan Tech sector and the Continent in general. 
+                    I believe we are able to solve our challanges and technology has a major role to play in setting the pace for the rest. 
+                    Also I'd like to expand in code knowledge and not to sound geeky, get to make cool games. 
+                </p>
+                <p>
+                    To take a look at some of my projects. Click on <strong>Projects</strong>
+                </p>
+            </div>    
+        </div>
+        <div class="footer" style="background-color: gray; height: 4vh;">
+
+        </div>
+    {% bootstrap_javascript %}
+</html>

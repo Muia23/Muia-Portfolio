@@ -1,0 +1,49 @@
+{% load bootstrap4 %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <title> Muia | Portfolio</title>    
+    </head>
+    <body>
+        <!--<div class="container-fluid" style="height:25vh; padding: 20px; background-color: lightblue;">
+            <p style="text-align:right;">{{date|date:"l, d-F Y"}}</p>        
+            <h2 style="text-align:center;">I am Wilfred</h2>
+            <br>
+            <h6 style="text-align:center;"> and I'm a fulstack developer</h6>
+        </div>
+        <div class="container">
+            <div class="row"  style="height: 5vh;">
+                <div class="col" style="background-color: lightblue; padding: 15px;">
+                    <h4 style="text-align: center;">About Me</h4>
+                </div>
+                <div class="col" style="background-color: lightgreen; padding: 15px;">
+                    <h4 style="text-align: center;">Projects</h4>
+                </div>                
+            </div>        
+        </div>-->
+        <div class="container-fluid">
+            {% block content %} 
+
+            {% endblock %}
+        </div>
+        <div class="footer" style="background-color: gray; height: 4vh;">
+
+        </div>
+    </body>
+    <style>
+        /* Hide scrollbar for Chrome, Safari and Opera */
+    .container::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .container {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+    </style>
+    {% bootstrap_javascript %}
+</html>

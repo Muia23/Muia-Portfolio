@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+    {% block content %}    
+        <div class="container" style="background-color: lightblue; padding: 25px 50px; height:66vh;"> 
+            <div class="row">
+                <div class="col"></div>
+                <div class="col-md-6" style="padding: 10px;">
+                    <form class ="navbar-form" role="search" action="{% url 'search_results' %}">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="search project" name="about">
+                            <div class="input-group-btn">
+                                <button class="btn btn-success" type="submit">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col"></div>                
+            </div>
+            <div class="row" style="padding-left: 27%;">
+                {% if about %}
+                    <p> Found {{about|length}} of searched term {{message}}</p>
+                {% else %}
+                    <p> Found 0 about for the search term {{message}}</p>
+                {% endif %}
+            </div>
+            <div class="container" style="max-height:50vh; overflow-y: scroll;">                    
+                {% if about %}
+                    {% for project in about %}
+                        <div class="row" style="padding :10px;">
+                            <div class="col">
+                                <img src="{{project.project_image.url}}" class="img-responsive" alt="Image" style="width: 100%;">
+                            </div>
+                            <div class="col">
+                                <h2>{{project.title}}</h2>
+                                <p> {{project.description}}</p>
+                            </div>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            </div>
+        </div>
+
+    {% endblock %}

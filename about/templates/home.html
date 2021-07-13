@@ -1,6 +1,39 @@
 {% extends 'base.html' %}
-    {% block content %}        
-    <div class="row" id="home" style="margin-top: 5vh; height: fit-content;">
+    {% load static %}
+    
+    {% block styles %}                    
+        <link href="{% static 'css/home.css' %}" rel="stylesheet"/>           
+    {% endblock %}                                 
+
+    {% block content %}   
+    {{block.super}}   
+    <div class="row landing">
+        <div class="col-md-2"></div>
+        <div class="col-md-6">
+            <div class="container">
+                <h3 class="name-txt">I'm Wilfred Muema</h3> 
+                <h5 class="skill-txt">A FullStack Developer</h5>
+            </div>            
+        </div>
+        <div class="col-md-3">
+            <div class="container img-cont">
+                <img src="{{profile.profile_image.url}}" class="prof-img">
+            </div>            
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+    <h1 class="nav">About Me</h1>
+    <h1 class="nav">My Projects</h1>
+    <div class="row">        
+        <div class="col-md-8">
+            <p>{{profile.about| safe}}</p>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+    </div>
+
+    <!--<div class="row" id="home" style="margin-top: 5vh; height: fit-content;">
         <div class="col-sm-5 col-md-5" style="text-align: center; ">     
             <div class="container">
                 <div class="row">
@@ -88,7 +121,7 @@
                         <div class="col"></div>
                     </div>
                     <div class="container" style="max-height:50vh; overflow-y: scroll;">                    
-                        <!-- Looping through projects -->
+                        <!-- Looping through projects --
                         {% for project in projects %}
                         <div class="row" style="padding:20px;">
                             <div class="col">
@@ -109,7 +142,5 @@
             </div>
         </div>
         
-    </div>
-        
-        
-    {% endblock %}
+    </div>-->
+{% endblock %}

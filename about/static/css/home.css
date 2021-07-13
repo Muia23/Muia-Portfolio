@@ -1,0 +1,16 @@
+.landing {
+    background: green;
+    height: 30vh;
+}
+
+.img-cont {
+    padding-top: 10vh;
+    
+}
+
+.prof-img {
+    border-radius: 50%;
+    border: solid red 4px;  
+    height: 300px;  
+    width: 300px;               
+}

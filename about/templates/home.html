@@ -6,141 +6,21 @@
     {% endblock %}                                 
 
     {% block content %}   
-    {{block.super}}   
-    <div class="row landing">
-        <div class="col-md-2"></div>
-        <div class="col-md-6">
-            <div class="container">
-                <h3 class="name-txt">I'm Wilfred Muema</h3> 
-                <h5 class="skill-txt">A FullStack Developer</h5>
-            </div>            
-        </div>
-        <div class="col-md-3">
-            <div class="container img-cont">
-                <img src="{{profile.profile_image.url}}" class="prof-img">
-            </div>            
-        </div>
-        <div class="col-md-1"></div>
-    </div>
-    <h1 class="nav">About Me</h1>
-    <h1 class="nav">My Projects</h1>
-    <div class="row">        
-        <div class="col-md-8">
-            <p>{{profile.about| safe}}</p>
-        </div>
-        <div class="col-md-4">
-
-        </div>
-    </div>
-
-    <!--<div class="row" id="home" style="margin-top: 5vh; height: fit-content;">
-        <div class="col-sm-5 col-md-5" style="text-align: center; ">     
-            <div class="container">
-                <div class="row">
-                    <div class="col">
-                        <div class="background" style="width: 370px; height: 500px; background: rgba(192, 178, 159, 0.87); position: absolute; top:2%; right:20px;" > </div>
-                        <img src="{{profile.profile_image.url}}" style="width: 390px; height: 500px; border:solid rgba(31, 128, 207, 0.815) 20px; display: inline-block;" class="profile" >                                                                                     
-                    </div>
-                    <div class="col-md-6">                
-                        <div class="row" style="height: 50%;"></div>                    
-                        <h3 style="display: inline-block;">I'm <span style="color:rgb(31, 128, 207); font-weight: bold;" >{{profile.profile_name}}</span></h3>
-                        <h6>I'm a FullStack Developer</h6>                                                    
-                    </div>
-                </div>
-            </div>
-        </div>
-        <style>
-            .profile {
-                clip-path: polygon(100% 0%, 76% 62%, 100% 100%, 11% 96%, 0% 50%, 28% 9%);
-            }
-            .background {
-                clip-path: polygon(100% 0%, 76% 62%, 100% 100%, 11% 96%, 0% 50%, 28% 9%);
-            }
-            .background:hover {
-              animation: shake 0.5s;
-              animation-iteration-count: infinite;
-            }
-            
-            @keyframes shake {
-              0% { transform: translate(1px, 1px) rotate(0deg); }
-              10% { transform: translate(-1px, -2px) rotate(-1deg); }
-              20% { transform: translate(-3px, 0px) rotate(1deg); }
-              30% { transform: translate(3px, 2px) rotate(0deg); }
-              40% { transform: translate(1px, -1px) rotate(1deg); }
-              50% { transform: translate(-1px, 2px) rotate(-1deg); }
-              60% { transform: translate(-3px, 1px) rotate(0deg); }
-              70% { transform: translate(3px, 1px) rotate(-1deg); }
-              80% { transform: translate(-1px, -1px) rotate(1deg); }
-              90% { transform: translate(1px, 2px) rotate(0deg); }
-              100% { transform: translate(1px, -2px) rotate(-1deg); }
-            }
-        </style>
-        <div class="col-sm-7 col-md-7" style="padding-top: 15px;">       
-            <div class="container" style="margin-top:5%; text-align: right; color: rgb(172, 168, 168); padding-right: 10%;">
-                <a href="#home" style="display: inline-block; color:rgb(31, 128, 207); font-weight: bold;">About</a>                
-                <h6 style="display: inline-block;padding: 0 5px;color: rgb(172, 168, 168);"><span>&#8226;</span></h6>                                
-                <a href="#projects" style="display: inline-block;color: rgb(172, 168, 168);">Projects</a>                
-            </div>              
-            <hr style="border-top: solid rgba(31, 128, 207, 0.815) 0.05em">     
-            <div class="container" style="padding: 50px 50px;">                 
-                <p>{{profile.about| safe}}</p>
-                <p style="text-align: center;">To take a look at some of my projects. Click on <strong>Projects</strong></p>
-                
-            </div>
-        </div>
-    </div>
-    <div class="row" id="projects">
-        <div class="row" style="height: 20vh;width:100vw;">
-            <div class="col-md-5">
-                <h3>Projects</h3>
-            </div>  
-            <div class="col-md-7">
-                <div class="container" style="margin-top:5%; text-align: right; color: rgb(172, 168, 168); padding-right: 10%;">
-                    <a href="#home" style="display: inline-block; color:rgb(172, 168, 168);">About</a>                
-                    <h6 style="display: inline-block;padding: 0 5px;color: rgb(172, 168, 168);"><span>&#8226;</span></h6>                                
-                    <a href="#projects" style="display: inline-block;color:rgb(31, 128, 207); font-weight: bold;">Projects</a>                                    
-                </div>
-                <hr style="border-top: solid rgba(31, 128, 207, 0.815) 0.05em">                  
-            </div>                        
-        </div>
-        <div class="row">
-            <div class="row">
-                <div class="container" style="background-color: lightblue; padding: 25px 50px; height:66vh;"> 
-                    <div class="row">
-                        <div class="col"></div>
-                        <div class="col-md-6" style="padding: 10px;">
-                            <form class ="navbar-form" role="search" action="{% url 'search_results' %}">
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="search project" name="about">
-                                    <div class="input-group-btn">
-                                        <button class="btn btn-success" type="submit">Search</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div class="col"></div>
-                    </div>
-                    <div class="container" style="max-height:50vh; overflow-y: scroll;">                    
-                        <!-- Looping through projects --
-                        {% for project in projects %}
-                        <div class="row" style="padding:20px;">
-                            <div class="col">
-                                <img src="{{project.project_image.url}}" class="img-responsive" alt="Image" style="width: 100%;">
-                            </div>
-                            <div class="col">
-                                <h1 class="heading"> {{project.title}}</h1>
-                                <hr>
-                                Tags: <h6 style="display: inline-block;"> {{project.tags}}</h6>
-                                <hr>
-                                <p> {{project.description}}</p>
-                            </div>
-                        </div>
-                        <hr>
-                        {% endfor %}
-                    </div>
-                </div>
-            </div>
-        </div>
+    {{block.super}}                
+            <div class="container containerTab" id="about" style="width: 75.5%; display: block; text-align: center;">                               
+                <p style="margin-top: 32px;">{{profile.about| safe}}</p>                                
+            </div>                          
         
-    </div>-->
+
+    <script href="{% static 'js/home.js' %}" ></script>           
+    <style>                
+        #about2 {
+            border-bottom: solid 0.01rem #b5b5b5;
+        }
+
+        #about1 {
+            font-weight: 600;
+        }
+
+    </style>    
 {% endblock %}

@@ -1,16 +1,77 @@
 .landing {
     background: green;
-    height: 30vh;
+    height: 30vh;            
+}
+
+@media screen and (min-width: 200px) and (max-width:480px){            
+    .landing {
+        height: 91vh;
+        text-align: center;
+    }            
+
+    .img-cont {
+        position: absolute;
+        margin-top: -50%;
+        align-self: center;                
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .landing-txt {
+        position: absolute;                
+        margin-top: 70%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.landing-txt {
+    padding: 25px;
 }
 
 .img-cont {
-    padding-top: 10vh;
-    
+    padding: 10px;
+    align-items: center;
 }
 
 .prof-img {
-    border-radius: 50%;
-    border: solid red 4px;  
-    height: 300px;  
-    width: 300px;               
+    position: relative;
+    border-radius: 50%;    
+    height: 200px;  
+    width: 200px;                           
+}
+
+.navigation {
+     display: inline-block;                                         
+     padding: 15px;
+}
+
+
+.navig h6 {           
+    color: rgb(84, 83, 83);
+}
+
+#about2:hover {
+    background: #dbdddf; 
+    background: -webkit-linear-gradient(to left, #c7c6c6c7, #cccbcbbf);
+    background: linear-gradient(to left, #ebebebc7, #f9f9f9bf);
+    border-right: solid 0.01rem #b8b7b7;  
+    font-weight: 600;          
+}
+
+#project2:hover {
+    background: #dbdddf; 
+    background: -webkit-linear-gradient(to right, #c7c6c6c7, #cccbcbbf);
+    background: linear-gradient(to right, #ebebebc7, #f9f9f9bf);
+    border-left: solid 0.01rem #b8b7b7;        
+    font-weight: 600;    
+}
+
+#about1:hover {
+    font-weight: 600;       
+}
+
+#project1:hover {
+    font-weight: 600;       
 }

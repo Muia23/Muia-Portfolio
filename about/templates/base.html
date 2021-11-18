@@ -1,3 +1,4 @@
+{% load static %}
 {% load bootstrap4 %}
 <!DOCTYPE html>
 <html>
@@ -5,45 +6,491 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://kit.fontawesome.com/5acd6cd805.js" crossorigin="anonymous"></script>        
         <title> Muia | Portfolio</title>    
     </head>
     <body>
-        <!--<div class="container-fluid" style="height:25vh; padding: 20px; background-color: lightblue;">
-            <p style="text-align:right;">{{date|date:"l, d-F Y"}}</p>        
-            <h2 style="text-align:center;">I am Wilfred</h2>
-            <br>
-            <h6 style="text-align:center;"> and I'm a fulstack developer</h6>
-        </div>
-        <div class="container">
-            <div class="row"  style="height: 5vh;">
-                <div class="col" style="background-color: lightblue; padding: 15px;">
-                    <h4 style="text-align: center;">About Me</h4>
+        <div class="container-fluid content" >
+            <div class="row landing" >                                                   
+                <div class="col-md-2"></div>
+                <div class="col-md-6">
+                    <div class="container landing-txt">
+                        <h3 class="name-txt">I'm Wilfred Muema</h3> 
+                        <h5 class="skill-txt">FullStack Developer</h5>
+                    </div>            
+                </div>              
+                <div class="col-md-3">
+                    <div class="container img-cont">
+                        <div class="prof-img-handler">
+                            <img src="{% static 'images/profile.jpg' %}" class="prof-img"> <!--{{profile.profile_image}}-->
+                        </div>                    
+                    </div>            
                 </div>
-                <div class="col" style="background-color: lightgreen; padding: 15px;">
-                    <h4 style="text-align: center;">Projects</h4>
-                </div>                
-            </div>        
-        </div>-->
-        <div class="container-fluid">
-            {% block content %} 
-
-            {% endblock %}
-        </div>
-        <div class="footer" style="background-color: gray; height: 4vh;">
-
-        </div>
+                <div class="col-md-1"></div> 
+                <p style="display: inline-block;" id="project3"></p>
+                <p style="display: inline-block;" id="about3"></p>                                        
+            </div>               
+            <div class="row">                
+                <div class="col-md-9" style="border-right: solid 0.01rem #b5b5b5;">                      
+                    <div class="container" style="text-align: center;">
+                        <div class="row">
+                            <a class="col navig" href="{% url 'home'%}" id="about2">
+                                <h6 class="navigation" id="about1">About Me</h6>
+                            </a>
+                            <a class="col navig" href="{% url 'projects'%}" id="project2">
+                                <h6 class="navigation" id="project1">My Projects</h6>
+                            </a>
+                        </div>                
+                    </div>
+                    <div class="container-fluid">
+                        {% block content %} 
+                        
+                        {% endblock %}
+                    </div> 
+                </div>
+                <div class="col-md-3" style="background:#eeeeee; z-index: -1;">                                    
+                    <h6 onclick="viewHskills()" style="padding: 10px 20px; position: relative;">Hard Skills <span id="arrow1" class="arrowdown" style="position: absolute; right: 5px;"><i class="fas fa-angle-double-down"></i></span></h6>
+                    <hr style="margin-top: -5px;">
+                    <div class="container" id="hskills">
+                        <div class="skill">
+                            <p>Visual Design Skills</p>
+                            <div class="skill-bar skill1 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Software Development</p>
+                            <div class="skill-bar skill2 wow slideInLeft animated">                         
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Database Management</p>
+                            <div class="skill-bar skill3 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Problem Solving</p>
+                            <div class="skill-bar skill4 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Critical Thinking</p>
+                            <div class="skill-bar skill5 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Adaptability</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Programming</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                    </div>                
+                    <h6 onclick="viewSskills()" style="padding: 10px 20px; position: relative; margin-top: -10px;">Software Skills <span id="arrow2" class="arrowdown" style="position: absolute; right: 5px;"><i class="fas fa-angle-double-down"></i></span></h6>
+                    <hr style="margin-top: -5px;">  
+                    <div class="container" id="sskills">
+                        <div class="skill">
+                            <p>HTML5</p>
+                            <div class="skill-bar skill1 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>CSS3</p>
+                            <div class="skill-bar skill2 wow slideInLeft animated">                         
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>JavaScript</p>
+                            <div class="skill-bar skill3 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>React</p>
+                            <div class="skill-bar skill4 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Angular</p>
+                            <div class="skill-bar skill5 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>C++</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Python</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Python</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>PHP</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Deployment</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                    </div>                
+                    <h6 onclick="viewFrmwrks()" style="padding: 10px 20px; position: relative; margin-top: -10px;">Frameworks <span id="arrow3" class="arrowdown" style="position: absolute; right: 5px;"><i class="fas fa-angle-double-down"></i></span></h6>
+                    <hr style="margin-top: -5px;">
+                    <div class="container" id="frameworks">
+                        <div class="skill">
+                            <p>Django</p>
+                            <div class="skill-bar skill1 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Flask</p>
+                            <div class="skill-bar skill2 wow slideInLeft animated">                         
+                            </div>
+                        </div>
+                    </div>                
+                    <h6 onclick="viewHobbies()" style="padding: 10px 20px; position: relative; margin-top: -10px;">Hobbies <span id="arrow4" class="arrowdown" style="position: absolute; right: 5px;"><i class="fas fa-angle-double-down"></i></span></h6>
+                    <hr style="margin-top: -5px;">
+                    <ul id="hobbies">
+                        <li><i class="fas fa-drum"></i></li>
+                        <li><i class="fas fa-swimming-pool"></i></li> 
+                        <li><i class="fas fa-utensils"></i></li>
+                    </ul>
+                    <br>
+                </div>            
+            </div> 
+        </div>            
+        <script id="dsq-count-scr" src="//zonkmusic.disqus.com/count.js" async></script>       
     </body>
-    <style>
-        /* Hide scrollbar for Chrome, Safari and Opera */
-    .container::-webkit-scrollbar {
-        display: none;
-    }
+    <style>            
+        .container::-webkit-scrollbar {
+            display: none;            
+        }
 
-    /* Hide scrollbar for IE, Edge and Firefox */
-    .container {
-      -ms-overflow-style: none;  /* IE and Edge */
-      scrollbar-width: none;  /* Firefox */
-    }
+        .content {
+            height: 100vh;
+            overflow-y: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none; 
+        }
+
+        #hskills {
+            display: block;
+            width: 90%;
+        }
+
+        #sskills {
+            display: none;
+            width: 90%;
+        }
+
+        #frameworks {
+            display: none;
+            width: 90%;
+        }
+
+        #hobbies {
+            display: none;
+            width: 90%;
+            list-style: none;        
+        }
+
+        #hobbies li {
+            display: inline-block;
+            font-size: 25px;
+            padding: 7px;
+        }
+
+        .landing {          
+            background-image: url('https://images.unsplash.com/photo-1583339824000-5afecfd41835?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=daniele-levis-pelusi-mkMSXR86kYY-unsplash.jpg'); 
+            background-size: cover;            
+            height: max-content;   
+            box-shadow: 1px 5px 7px #afafaf;
+            background-position: 100% 100%;
+
+        }
+
+        @media screen and (min-width: 291px) and (max-width:354px){            
+            .landing {
+                height: 91vh;
+                text-align: center;
+            }            
+
+            .img-cont {
+                position: absolute;
+                margin-top: -50%;
+                align-self: center;                
+                top: -10%;
+                left: 50%;
+                transform: translate(-50%, -10%);
+            }
+
+            .landing-txt {
+                position: absolute;                
+                margin-top: 80%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+        @media screen and (min-width: 355px) and (max-width:480px){            
+            .landing {
+                height: 91vh;
+                text-align: center;
+            }            
+
+            .img-cont {
+                position: absolute;
+                margin-top: -50%;
+                align-self: center;                
+                top: 20%;
+                left: 50%;
+                transform: translate(-50%, 20%);
+            }
+
+            .landing-txt {
+                position: absolute;                
+                margin-top: 80%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        .landing-txt {
+            padding: 50px 25px;
+        }
+
+        .img-cont {
+            padding: 10px;
+            align-items: center;
+        }
+
+        .prof-img-handler {
+            position: relative;            
+            overflow: hidden;
+            border-radius: 50%;    
+            height: 200px;  
+            width: 200px;          
+        }
+
+        .prof-img {            
+            height: 250px;  
+            width: 200px;                           
+        }
+
+        .navigation {
+             display: inline-block;                                         
+             padding: 15px;
+        }
+        
+
+        .navig h6 {           
+            color: rgb(84, 83, 83);
+        }
+
+        #about2:hover {
+            background: #dbdddf; 
+            background: -webkit-linear-gradient(to left, #c7c6c6c7, #cccbcbbf);
+            background: linear-gradient(to left, #ebebebc7, #f9f9f9bf);
+            border-right: solid 0.01rem #b8b7b7;  
+            font-weight: 600;          
+        }
+
+        #project2:hover {
+            background: #dbdddf; 
+            background: -webkit-linear-gradient(to right, #c7c6c6c7, #cccbcbbf);
+            background: linear-gradient(to right, #ebebebc7, #f9f9f9bf);
+            border-left: solid 0.01rem #b8b7b7;        
+            font-weight: 600;    
+        }
+
+        #about1:hover {
+            font-weight: 600;       
+        }
+
+        #project1:hover {
+            font-weight: 600;       
+        }
+
+        .arrowup {            
+            -webkit-transform:rotate(180deg);
+            -moz-transform: rotate(180deg);
+            -ms-transform: rotate(180deg);
+            -o-transform: rotate(180deg);
+            transform: rotate(180deg);
+        }        
+
+
+        .skill {            
+            margin-bottom: 20px;
+            line-height: 20px;
+            position: relative;
+			overflow-x: hidden;	            	
+        }
+        .skill > p {                        
+            color: #1a1716;
+            font-size: 13px;
+            margin: 0;
+        }
+        .skill:before{
+            width: 100%;
+            height: 5px;
+            content: "";
+            display: block;
+            position: absolute;
+            background: #959595;
+            bottom: 0;
+        }
+        .skill-bar {
+            width: 100%;
+            height: 5px;
+            background:#2facf4;
+            display: block;
+            position: relative;
+        }
+
+        /* SKILL 1 */
+        .skill1{
+            width: 95%;
+        
+        }
+        .skill-bar span{
+            position: absolute;
+            border-top: 5px solid #2facf4;
+            top: -30px;
+            padding: 0;
+            font-size: 13px;
+            padding: 3px 0;
+            font-weight: 500;
+        }
+        .skill-bar {
+            position: relative;
+        
+        }
+
+        .skill1 .skill-count1 {
+            right: 0;
+        }
+        /* SKILL 2 */
+        .skill2{
+            width: 85%;
+        }
+
+        .skill2 .skill-count2 {
+            right: 0;
+        }
+        /* SKILL 3 */
+        .skill3{
+            width: 75%;
+        }
+        .skill3 .skill-count3 {
+            right: 0;
+        }
+
+        /* SKILL 4 */
+        .skill4{
+            width: 65%
+        }
+
+        .skill4 .skill-count4 {
+            right: 0;
+        }
+
+        /* SKILL 5 */
+        .skill5{
+            width: 80%;
+        }
+
+        .skill5 .skill-count5 {
+            right: 0;
+        }
+
+        /* SKILL 6 */
+        .skill6{
+            width: 90%
+        }
+
+        .skill6 .skill-count6 {
+            right: 0;
+        }
     </style>
+    <script>
+        // (function($){
+        //     new WOW().init();
+        // })(jQuery);
+
+        function viewHskills() {        
+            var b = document.getElementById("hskills");  
+            var c = document.getElementById("arrow1");
+            if (b.style.display === "none") {
+                b.style.display = "block";
+                c.classList.add('arrowup');            
+                c.classList.remove('arrowdown');            
+            } else {
+                b.style.display = "none";
+                c.classList.remove('arrowup');            
+                c.classList.add('arrowdown');            
+            }
+        }
+
+        function viewSskills() {        
+            var b = document.getElementById("sskills");  
+            var c = document.getElementById("arrow2");
+            var d = document.getElementById("hskills");  
+            var e = document.getElementById("arrow1");
+            if (b.style.display === "none") {
+                b.style.display = "block";
+                c.classList.add('arrowup');            
+                c.classList.remove('arrowdown');                        
+
+                if (d.style.display === "block") {
+                    d.style.display = "none";
+                    e.classList.add('arrowup');            
+                    e.classList.remove('arrowdown');                        
+                }
+            } else {
+                b.style.display = "none";
+                c.classList.remove('arrowup');            
+                c.classList.add('arrowdown');            
+            }
+        }
+
+        function viewFrmwrks() {        
+            var b = document.getElementById("frameworks");  
+            var c = document.getElementById("arrow3");
+            if (b.style.display === "none") {
+                b.style.display = "block";
+                c.classList.add('arrowup');            
+                c.classList.remove('arrowdown');            
+            } else {
+                b.style.display = "none";
+                c.classList.remove('arrowup');            
+                c.classList.add('arrowdown');            
+            }
+        }
+
+        function viewHobbies() {        
+            var b = document.getElementById("hobbies");  
+            var c = document.getElementById("arrow4");
+            if (b.style.display === "none") {
+                b.style.display = "block";
+                c.classList.add('arrowup');            
+                c.classList.remove('arrowdown');            
+            } else {
+                b.style.display = "none";
+                c.classList.remove('arrowup');            
+                c.classList.add('arrowdown');            
+            }
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     <script href="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </html>

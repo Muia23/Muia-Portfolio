@@ -1,7 +1,9 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseRedirect
+from django.urls import reverse
 import datetime as dt
-from .models import Project, Profile
+from .models import Project, Profile, Project_comment, ProjectCollab
+from .forms import CommentForm
 
 # Create your views here.
 def home(request):
@@ -23,8 +25,9 @@ def convert_dates(dates):
 
 def projects(request):
     date = dt.date.today()
+    profile =  Profile.get_profile()
     projects = Project.get_projects()
-    return render(request, 'projects.html', {"date": date, "projects": projects})
+    return render(request, 'projects.html', {"date": date, "profile": profile, "projects": projects})
 
 def search_results(request):
 
@@ -38,3 +41,26 @@ def search_results(request):
     else:
         message = "You haven't searched for any term"
         return render(request, 'search.html', {"message": message})
+
+def project_detail(request,id):
+    profile =  Profile.get_profile()
+    project =  Project.get_project_detail(id)
+    form = CommentForm(request.POST)
+
+    if form.is_valid():
+        comment = form.save(commit=False)
+        comment.project = project
+        comment.save()     
+
+        return HttpResponseRedirect(reverse('projectsdetail', args=[str(id)]))
+
+    else:
+        form = CommentForm()        
+
+        return render(request, 'projectdetail.html',{"profile": profile, "project": project, "form":form})
+
+def project_collab(request):
+    profile =  Profile.get_profile()
+    projects = ProjectCollab.get_projects()
+
+    return render(request, 'projectcollab.html',{"profile": profile, "projects":projects})

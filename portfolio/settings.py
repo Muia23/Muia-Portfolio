@@ -53,6 +53,7 @@ INSTALLED_APPS = [
     'about.apps.AboutConfig',
     'bootstrap4',
     'tinymce',
+    'ckeditor',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -146,6 +147,18 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+
+
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar': 'full',
+        'extraPlugins': ','.join(
+            [
+               'justify',
+            ]
+        ),
+    },
+}
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())

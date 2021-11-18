@@ -1,0 +1,129 @@
+{% extends 'base.html' %}
+{% load bootstrap4 %}
+    {% load static %}
+    
+    {% block styles %}                    
+        <link href="{% static 'css/projects.css' %}" rel="stylesheet"/>           
+    {% endblock %}                                 
+
+    {% block content %}   
+    {{block.super}}                       
+        
+        <br>                
+        <div class="row">
+            <div class="col-md-2"></div>
+            <div class="col-md-8">
+                <div class="row" style="border-bottom:solid  #e4e4e4 0.01rem; text-align: center;">                    
+                    <div class="col">
+                        <a href="{% url 'projects' %}" style="color: gray; text-decoration: none;"><i class="fas fa-th"></i></a>
+                    </div>
+                    <div class="col">
+                        <i class="fas fa-bars" style="color: black;"></i>
+                    </div>
+                    <div class="col">
+                        <a href="{% url 'projectcollabs' %}" style="color: grey; text-decoration: none;"><i class="fas fa-id-card"></i></a>
+                    </div>   
+                    <br>                         
+                </div>
+            </div>
+            <div class="col-md-2"></div>
+        </div>                
+        <div class="container containertab" id="solo" style="text-align: center;">                   
+            <br>                                      
+            <h5 style="text-align: left;">{{project.title}}</h5>                                        
+            <div class="row">  
+                <div class="col-md-1 order-sm-12">
+                    <a href="{{project.projectimageurl1}}" target="blank" type="button" class="btn btn-danger">Visit</a>
+                </div>
+                <div class="col-md-11 order-sm-1" style="text-align: center;">                               
+                        <div id="carouselExampleIndicators" class="carousel slide container" data-ride="carousel">                                
+                            <p style="display: inline-block; font-size: 14px; color: grey;"> <span style="margin-top: 2px;">&#8226;</span> screenshots <span>&#8226;</span> </p>
+                            <div class="card" style="box-shadow: 3px 6px 7px #706f6f; border: none;">
+                            <ol class="carousel-indicators">
+                              <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                              <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                {% if project.projectimageurl1 %}
+                                    <div class="carousel-item active" >
+                                      <a href="{{project.projectimageurl1}}" target="blank"><img src="{{project.projectimage1}}" class="d-block w-100" alt="..."></a>
+                                    </div>
+                                {% else %}
+                                {% endif %}
+                                {% if project.projectimageurl2 %}
+                                    <div class="carousel-item">
+                                      <a href="{{project.projectimageurl2}}" target="blank"><img src="{{project.projectimage2}}" class="d-block w-100" alt="..."></a>
+                                    </div>
+                                {% else %}
+                                {% endif %}
+                                {% if project.projectimageurl3 %}
+                                    <div class="carousel-item">
+                                      <a href="{{project.projectimageurl3}}" target="blank"><img src="{{project.projectimage3}}" class="d-block w-100" alt="..."></a>
+                                    </div>
+                                {% else %}
+                                {% endif %}
+                                {% if project.projectimageurl4 %}
+                                    <div class="carousel-item">
+                                      <a href="{{project.projectimageurl4}}" target="blank"><img src="{{project.projectimage4}}" class="d-block w-100" alt="..."></a>
+                                    </div>
+                                {% else %}
+                                {% endif %}
+                                {% if project.projectimageurl5 %}
+                                    <div class="carousel-item">
+                                      <a href="{{project.projectimageurl5}}" target="blank"><img src="{{project.projectimage5}}" class="d-block w-100" alt="..."></a>
+                                    </div>
+                                {% else %}
+                                {% endif %}                                        
+                            </div>
+                            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                              <span class="sr-only">Next</span>
+                            </a>                                
+                        </div>     
+                    </div>                                                
+                </div>                        
+            </div>
+            <div class="row frameworks">                        
+                <div class="col-md-8" style="text-align: left;">
+                    {% for tag in project.tags.all %}
+                        <p style="display: inline-block; padding: 5px; border: 0.1rem solid grey; border-radius: 25px; margin: 12px 0; font-size: 13px; box-shadow: 3px 3px 3px #b3b2b2;"">{{tag}}</p>                                
+                    {% endfor %}
+                </div>               
+                <div class="col-md-4">
+                    <p style="padding: 12px 5px;">Hosting: <img src="/media/images/heroku.png" style="height:35px; width:40px;"></p>                            
+                </div>         
+            </div>
+            <div class="row">
+                <div class="col-md-5 about">
+                    <p>About {{project.title}}</p>
+                    <p>
+                        {{project.description|safe}}
+                    </p>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6 comments">                                                        
+                    <a class="blog-comments" href="{% url 'projectsdetail' project.id %}#disqus_thread">Post a comment...</a>
+                    <div class="container" style="max-height: 500px; overflow-y: scroll;">
+                        <br>                                
+                        {% include 'comment.html' with url=project.id %}                                
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        </div>    
+        <style>
+            #project2 {
+                border-bottom: solid 0.01rem #b5b5b5;
+            }
+    
+            #project1 {
+                font-weight: 600;
+            }
+        </style>                        
+        
+{% endblock %}

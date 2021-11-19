@@ -8,6 +8,7 @@ django-bootstrap4
 django-heroku
 django-registration
 django-tinymce
+django-ckeditor
 gunicorn
 Pillow
 psycopg2

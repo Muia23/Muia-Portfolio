@@ -1,26 +1,239 @@
 {% extends 'base.html' %}
-    {% load static %}
-    
-    {% block styles %}                    
+{% load static %} 
+    {% block extend_head %}
         <link href="{% static 'css/home.css' %}" rel="stylesheet"/>           
-    {% endblock %}                                 
-
-    {% block content %}   
-    {{block.super}}                
-            <div class="container containerTab" id="about" style="width: 75.5%; display: block; text-align: center;">                               
-                <p style="margin-top: 32px;">{{profile.about| safe}}</p>                                
-            </div>                          
-        
-
-    <script href="{% static 'js/home.js' %}" ></script>           
-    <style>                
-        #about2 {
-            border-bottom: solid 0.01rem #b5b5b5;
-        }
-
-        #about1 {
-            font-weight: 600;
-        }
-
-    </style>    
+    {% endblock %}
+    {% block content %}       
+        {{block.super}}                
+            <div class="container">  
+                <br><br>
+                <div class="row profile_section">
+                    <div class="col"></div>
+                    <div class="col-sm-8">
+                        <div class="row">                            
+                            <div class="col-lg-5">
+                                <div class="container prof-container">
+                                    <img src="https://static.wixstatic.com/media/5498a7_ed56a11b333e4f1aa7c4205779cdfff3~mv2.jpg" class="prof-img"> 
+                                    <div class="egg"></div>
+                                    <div class="egg2"></div>
+                                    <div class="egg3"></div>
+                                    <div class="egg4"></div>
+                                </div>                                  
+                           </div>                           
+                           <div class="col-lg-7" style=" position: relative;">
+                               <div class="profile-text">
+                                <h1 class="profile_name">{{profile.profile_name}}</h1>
+                                <h3 class="profile_title">{{profile.profile_title}}</h3>
+                               </div>                                
+                           </div>
+                        </div>
+                    </div>                    
+                    <div class="col"></div>
+                </div>
+                <br><br>                
+                <div class="row section_2">
+                    <div class="col"></div>
+                    <div class="col-sm-9">
+                        <div class="row">
+                            <div class="col-sm-5" style="position: relative;">
+                                <img src="https://static.wixstatic.com/media/5498a7_b8363590973e49dd95a87f62091d11c4~mv2.png" class="section_2-img">
+                            </div>
+                            <div class="col-sm-7">
+                                <h2 class="section_2-title">Websites done right.</h2>
+                                <p class="section_2-paragraph">An enthusiastic full-stack developer based in Nairobi, Kenya. 
+                                    I enjoy building everything from small business sites to rich interactive web apps. 
+                                    If you are a business seeking a web presense or an employer looking to hire, 
+                                    you can get in touch with me here.
+                                </p>
+                                <div class="container proceed">
+                                    <button class="btn client">I need a website <i class="bi bi-chevron-right"></i></button>
+                                    <button class="btn hire">I'm looking to hire <i class="bi bi-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <br><br>
+                <div class="row section_3">
+                    <div class="col"></div>
+                    <div class="col-sm-10">
+                        <h2 class="section_3-title">I build things for the web.</h2>
+                        <p class="section_3-paragraph">
+                            Being a believer in learning by doing and having fun.
+                             I focus on “What?” to produce and “How” it will best serve the target users.
+                             Here are some of my greatest works
+                        </p>
+                        <br><br>
+                        <div class="container section_3-content">
+                            <div class="section_3-toggle">
+                                <h6 class="prototypes-toggle" >Prototypes</h6>
+                                <h6 class="projects-toggle" >Projects</h6>
+                                <br>
+                                <hr style="margin-top: -10px;">
+                            </div>                                                                                                                
+                            <div class="prototypes-display row">
+                                <div class="col">
+                                    <div class="card prototype_card">
+                                        <div class="prototype_platform">
+                                            <div class="prototype_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_e95646ddda5a4834a75f873d0b738c2b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        </div>
+                                        <div class="prototype" style="background: url('https://static.wixstatic.com/media/5498a7_a4a3eb20a49c4055a7a872736c88c6b7~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card prototype_card">
+                                        <div class="prototype_platform">
+                                            <div class="prototype_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_e95646ddda5a4834a75f873d0b738c2b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        </div>
+                                      <div class="prototype" style="background: url('https://static.wixstatic.com/media/5498a7_a8825354c0434e8ebaf849bac66d0e99~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                    </div>
+                                </div>                                                                    
+                                <div class="col">
+                                    <div class="card prototype_card">
+                                        <div class="prototype_platform">
+                                            <div class="prototype_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_e95646ddda5a4834a75f873d0b738c2b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        </div>
+                                      <div class="prototype" style="background: url('https://static.wixstatic.com/media/5498a7_9c04196017fd4b2c805fcc8c07fbf0ba~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="card prototype_card">
+                                        <div class="prototype_platform">
+                                            <div class="prototype_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_e95646ddda5a4834a75f873d0b738c2b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        </div>
+                                      <div class="prototype" style="background: url('https://static.wixstatic.com/media/5498a7_778fa32b77244e90b2d623f0fa37c5a0~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                    </div>
+                                </div>                                                                                            
+                            </div>
+                            <div class="projects-display" style="display: none;">                                                            
+                                <div class="card project_card">                                          
+                                    <div class="project_overlay">
+                                        <div class="project_platform">
+                                            <div class="project_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_f052b54178e44a1aa3696d386a12524b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="project" style="background: url('https://static.wixstatic.com/media/5498a7_4481c6dda57f4298b076d8a9a6ea8f53~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                </div>                                                                        
+                                <div class="card project_card">                                          
+                                    <div class="project_overlay">
+                                        <div class="project_platform">
+                                            <div class="project_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_23c59c87615b4614afb2d46e7398dd48~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="project" style="background: url('https://static.wixstatic.com/media/5498a7_7ea2261d790b4726bc7e018e91abeb62~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                </div>                                                                        
+                                <div class="card project_card">                                          
+                                    <div class="project_overlay">
+                                        <div class="project_platform">
+                                            <div class="project_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_23c59c87615b4614afb2d46e7398dd48~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="project" style="background: url('https://static.wixstatic.com/media/5498a7_9674bffe24204ef7958d6f42e0f8041a~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                </div>                                                                        
+                                <div class="card project_card">                                          
+                                    <div class="project_overlay">
+                                        <div class="project_platform">
+                                            <div class="project_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_23c59c87615b4614afb2d46e7398dd48~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="project" style="background: url('https://static.wixstatic.com/media/5498a7_5ffcdb4fc4de4178a38e3a8f68408388~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                </div>                                                                     
+                            </div>
+                        </div>                        
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <br><br>
+                <div class="row section_4">
+                    <div class="col"></div>
+                    <div class="col-sm-10">
+                        <h2 class="section_4-title">Skills & Tools</h2>
+                        <p class="section_4-paragraph">The skills, tools and technologies I use to bring your products to life:</p>
+                        <br><br>
+                        <div class="skills_content">
+                            <div class="skill_container">
+                                <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_67ea716a4ff043af8684ab8725e61e2b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                <div class="skill_title">HTML5</div>
+                            </div>
+                            <div class="skill_container">
+                                <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_67ea716a4ff043af8684ab8725e61e2b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                <div class="skill_title">CSS3</div>
+                            </div>
+                            <div class="skill_container">
+                                <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_80d7379d75df4c8ba978a4ecd5129a19~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                <div class="skill_title">JavaScript</div>
+                            </div>
+                            <div class="skill_container">
+                                <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_da27c8627aff4358b1f0e0785e41d3f9~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                <div class="skill_title">jQuery</div>
+                            </div>
+                            <div class="skill_container">
+                                <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_c7f2e988d9374bc1bdb74216a5ae57eb~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                <div class="skill_title">React</div>
+                            </div>                            
+                            <div class="skill_container">
+                                <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_1f947c0cd5d0487e972d43765b743977~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                <div class="skill_title">SASS</div>
+                            </div>
+                            <div class="skill_container">
+                                <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_c6df01af071c48f0a0827bc33306f2be~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                <div class="skill_title">Figma</div>
+                            </div>
+                            <div class="skill_container">
+                                <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_1ec0a78b527542da8e9b3711e951c89b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                <div class="skill_title">Angular</div>
+                            </div>
+                            <div class="skill_container">
+                                <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_5d446a6e65884320a7540dd3c6eb250c~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                <div class="skill_title">Docker</div>
+                            </div>
+                            <div class="skill_container">
+                                <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_5a62151f96a14cd99344f80555ce2008~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                <div class="skill_title">Django</div>
+                            </div>
+                            <div class="skill_container">
+                                <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_7a8f5a2da6d3417c9c2cbf5d758aecf9~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                <div class="skill_title">RESTful APIs</div>
+                            </div>
+                            <div class="skill_container">
+                                <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_55422757dde84e27adf6f55ad79c1d88~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                <div class="skill_title">Responsive Websites</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+                <br><br>
+                <div class="row section_5">
+                    <div class="col"></div>
+                    <div class="col-sm-11">
+                        <h2 class="section_5-title">Get in Touch</h2>
+                        <div class="row">
+                            <div class="col-md-3 info_section">
+                                <h6> <span> <img class="info_icon" src="https://static.wixstatic.com/media/5498a7_476ba9f635c748d1a7a42c85ae92c410~mv2.png"> </span> Nairobi, Kenya</h6>
+                                <h6> <span> <img class="info_icon" src="https://static.wixstatic.com/media/5498a7_953ff552c58d426e87ac86b4ec997814~mv2.png"> </span> wilfredmuema@gmail.com</h6>
+                                <h6> <span> <img class="info_icon" src="https://static.wixstatic.com/media/5498a7_2b458719e2a6492fa65960f244af8334~mv2.png"> </span> +254-714-862-024</h6>
+                            </div>                            
+                            <div class="col-md-9">
+                                <div class="container contact_form-container">
+                                    <form class="contact_form">                                                                                                                            
+                                        <input type="text" class="form-control form_input" placeholder="First Name">                                                                                        
+                                        <input type="text" class="form-control form_input" placeholder="Second Name">                                                                                        
+                                        <input type="email" class="form-control form_input" placeholder="Email">                                                                                        
+                                        <input type="tel" class="form-control form_input" style="margin-bottom: 15px !important;" placeholder="Phone">                                                                                        
+                                        <textarea class="form-control form_input text_input" rows="4" placeholder="Enter your message..."></textarea>                                                                                                                                                                                                                                                      
+                                    </form>                                                                            
+                                    <button class="btn submit_btn">Submit</button>                                                                                                               
+                                    <br><br><br><br>
+                                </div>
+                            </div>                            
+                        </div>
+                    </div>
+                    <div class="col"></div>
+                </div>
+            </div>  
+    {% block extend_footer %}                                                
+        <script src="{% static 'js/home.js' %}" ></script>             
+    {% endblock %}
 {% endblock %}

@@ -1,0 +1,955 @@
+.profile_section {
+    /* height: 40vh; */
+}
+
+.prof-container {
+    width: 100%;
+    position: relative; 
+    height: 240px;
+}
+
+.prof-img {    
+    height: 200px;  
+    width: 200px;   
+    position: absolute;    
+    margin-top: 25px;
+    border-radius: 50%;
+    /* left: 50%;
+    transform: translate(-50%, 0);                         */
+    z-index: 10;
+}
+
+.profile-text {
+    position: absolute;
+    width: 500px;
+    left: 50%;
+    transform: translate(-50%, 0);                        
+    top: 10vh;
+}
+
+.profile_name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #000000;
+    font-size: 50px;
+}
+
+.profile_title {
+    font-family: 'Red Hat Display', sans-serif;
+    color: #108D95;
+    font-size: 22px;
+}   
+
+.section_2 {
+    margin-top: 15vh;
+}
+
+.section_2-img {
+    height: 258px;  
+    width: 462px;   
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);                        
+}
+
+.section_2-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 50px;
+}
+
+.section_2-paragraph {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    padding-top: 20px;
+    padding-left: 15px;
+}
+
+.section_3 {
+    margin-top: 15vh;
+}
+.proceed button {
+    width: 200px;
+    float: left;    
+    margin-left: 30px;
+    margin-top: 10px;
+}
+
+.client {
+    color: #ffffff;
+    background: #108c9593;
+    border-radius: none !important;
+    border: none;
+    padding: 10px 20px;
+}
+
+.hire {
+    color: #108D95;
+    border: solid #108D95 0.5px;
+    border-radius: none !important;    
+    padding: 10px 20px;
+    background: none;    
+}
+
+.section_3-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 50px;    
+}
+
+.section_3-paragraph {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    padding-top: 20px;
+    margin-left: 30px;    
+}
+
+.section_3-content {    
+    text-align: center;
+}
+
+.section_3-content h6 {
+    display:inline-block;    
+}
+
+.prototypes-toggle {
+    padding: 10px 25px;
+    color: #108D95;
+    border-bottom: solid #108D95 2px;
+
+}
+
+.projects-toggle {
+    padding: 10px 35px;
+}
+
+/* .prototypes-display .card {
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+} */
+
+.prototype_platform {
+    background: #108c95b6;
+    height: 40px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+}
+
+.prototype_card {
+    padding: 10px 0;
+    background: #f0ffff;
+    border: solid #108c9585 1px;
+    height: 195px;
+    width: 310px;
+    border-radius: 15px;
+    position: relative;    
+}
+
+.prototype{                                
+    width: 308px;
+    height: 195px;                
+}
+
+.prototype_platform_img {                                
+    margin-top: 5px;
+    height: 29px;
+    width: 29px;                
+}
+
+.projects-display {
+    justify-content: center;
+}
+
+.projects-display .card {
+    float: left;
+    margin-left: 10px;
+}
+
+.project_card {        
+    background: none;
+    border: none;
+    position: relative;
+    height: 195px;
+    width: 310px;    
+}
+
+.project_platform {
+    background: #42b1b9d7;
+    height: 40px;
+    width: 30px;
+    position: absolute;
+    top: 0;
+    left: 15px;
+}
+
+.project_platform_img {                                
+    margin-top: 5px;
+    height: 29px;
+    width: 29px;                
+}
+
+.project{                                
+    width: 294px;
+    height: 178px;                           
+    position: absolute;
+    z-index: 1;
+    left: 8px;
+    top: 1px;
+}
+
+.project_overlay {
+    border: solid #108c9585 1px;
+    background: linear-gradient(#108c9515,#108c9569);
+    border-radius: 15px;
+    height: 182px;
+    width: 310px;
+    z-index: 2;
+}
+
+.section_4 {
+    margin-top: 15vh;
+}
+
+.section_4-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
+    color: #000000;
+    font-size: 50px;
+}
+
+.section_4-paragraph {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    color: #000000;
+    font-size: 18px;
+    padding-top: 20px;
+    margin-left: 30px;      
+}
+
+.skills_content .skill_container {
+    float: left;
+    margin-left: 20px;
+    margin-top: 10px;
+}
+.skill_container {    
+    height: 200px;
+    width: 150px;
+    text-align: center;
+}
+
+.skill_img {
+    /* height: 120px; */
+    height: 135px;
+    width: 140px;
+    margin-left: 5px;    
+}
+
+.skill_title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;    
+    font-weight: 400;
+}
+
+.section_5-title {
+    margin-top: 15vh;
+}
+
+.section_5-title {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: #000000;
+    font-size: 50px;
+    text-align: center;
+}
+
+.contact_form input {
+    float: left;
+    margin-left: 10px;
+}
+
+.form_input {
+    border: solid #108c9583 1px;
+    width: 350px;
+    border-radius: 20px;
+    background: #108c951c;
+    font-family: 'Roboto', sans-serif;
+    color: #000000;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.form_input:focus {
+    box-shadow: none !important;
+    background: #fdfdfd79;
+    border: solid #108c9583 1px;
+}
+
+.form_input::placeholder {
+    font-family: 'Roboto', sans-serif;
+    color: #108D95;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.text_input {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+    width: 700px;
+}
+
+.submit_btn {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;    
+    width: 150px;
+    color: #ffffff;
+    border-radius: 20px;
+    align-content: center;
+    background: #108D95;
+    margin-top: 30px !important;
+}
+
+.info_icon {
+    height: 60px;
+    width: 60px;
+}
+
+.egg{    
+    width: 250px;
+    height: 250px;
+    background-color: hwb(184 6% 42% / 0.29);
+    animation: rotation 10s infinite linear;
+    clip-path: ellipse(36% 50% at 50% 50%);
+    z-index: 3;    
+    position: absolute;    
+}
+
+.egg2{    
+    width: 250px;
+    height: 250px;
+    background-color: rgba(158, 158, 158, 0.39);
+    animation: rotation2 18s infinite linear;
+    clip-path: ellipse(36% 50% at 50% 50%);
+    z-index: 2;
+    position: absolute;    
+}
+
+.egg3{    
+    width: 250px;
+    height: 250px;
+    background-color: hsla(184, 80%, 32%, 0.550);
+    animation: rotation3 31s infinite linear;
+    clip-path: ellipse(36% 50% at 50% 50%);
+    z-index: 1;
+    position: absolute;    
+}
+
+.egg4{    
+    width: 250px;
+    height: 250px;
+    background-color: rgba(158, 158, 158, 0.550);
+    animation: rotation4 26s infinite linear;
+    clip-path: ellipse(36% 50% at 50% 50%);
+    z-index: 0;
+    position: absolute;    
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes rotation2 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+@keyframes rotation3 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+@keyframes rotation4 {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(359deg);
+    }
+}
+
+@media only screen and (min-width: 460px) and (max-width: 575px) {
+    .prof-container { 
+        margin-left: 10%;       
+        margin-top: -25px;
+    }
+    
+    .prof-img {
+        margin-left: 25px;
+    }
+
+    .profile-text {  
+        top: 7vh;              
+        width: 340px;
+        left: 55%;
+        transform: translate(-56%, 0);
+    }
+
+    .profile_name {
+        font-size: 40px;
+    }
+
+    .profile_title {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .section_2-img {
+        height: 140px;
+        width: 250px;
+        top: 260px;        
+    }
+
+    .section_2-title {
+        font-size: 30px;
+        min-width: 255px;
+    }
+
+    .section_2-paragraph {        
+        font-size: 16px;
+        padding-top: 20px;        
+        min-width: 250px;
+    }
+
+    .proceed {
+        margin-top: 250px;
+    }
+
+    .section_3 {
+        margin-top: 0;
+    }
+
+    .section_3-title {
+        font-size: 30px;
+        min-width: 265px;
+    }
+
+    .section_3-paragraph {
+        font-size: 16px;
+        padding-top: 20px;        
+        min-width: 260px;
+    }
+
+    .section_3-content {
+        margin-left: -20px;
+    }
+
+    .section_3-toggle {
+        width: 270px;
+    }
+    
+    .prototype_card {        
+        height:165px;
+        width:280px;
+        margin-top: 10px;
+    }
+
+    .section_4{
+        margin-top:2vh;
+    }
+
+    .section_4-title {
+        font-size: 30px;
+        min-width: 185px;
+    }
+
+    .section_4-paragraph {
+        font-size: 16px;                
+        padding-top: 20px;
+        
+        min-width: 230px;     
+    }
+
+    .skill_img {
+        height: 50px;        
+        width: 55px;
+        margin-left: 5px;    
+    }
+
+    .skills_content {
+        width: 400px;
+        margin-left: -13px;
+    }
+
+    .skills_content .skill_container {        
+        margin-left: 0;        
+    }
+
+    .skill_container {
+        height: auto;
+        width: 100px;
+        text-align: center;
+    }
+
+    .skill_title {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .section_5-title {
+        font-size: 30px;
+        margin-top: 0;
+        min-width: 170px;
+    }    
+
+    .info_section {
+        margin-left: -10%;
+    }
+
+    .info_section h6 {
+        font-size: 13px;    
+        width: 100%;
+        min-width: 250px;
+    }
+
+    .info_section span {
+        margin-right: 2%;
+    }    
+
+    .info_icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .contact_form-container {
+        width: 135%;
+        margin-left: -80px;
+    }
+
+    .form_input {
+        width: 98%;
+        min-width: 310px;
+    }
+
+    .text_input {
+        width: 98%;
+        min-width: 310px;
+        margin-left: 10px;
+    }
+
+    .form_input::placeholder {                      
+        font-size: 13px;
+    }
+
+    .submit_btn {
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (min-width: 400px) and (max-width: 459px) {
+    /* .prototype_card {
+        margin-left: 12%;
+    } */
+
+    .prof-container {        
+        margin-top: -25px;
+    }
+    
+    .prof-img {
+        margin-left: 25px;
+    }
+
+    .profile-text {  
+        top: 7vh;      
+        width: 100%;
+        min-width: 350px;
+        left: 55%;
+    }
+
+    .profile_name {
+        font-size: 40px;
+    }
+
+    .profile_title {
+        font-size: 15px;
+        font-weight: 600;
+    }
+
+    .section_2-img {
+        height: 140px;
+        width: 250px;
+        top: 280px;        
+    }
+
+    .section_2-title {
+        font-size: 30px;
+        min-width: 255px;
+    }
+
+    .section_2-paragraph {        
+        font-size: 16px;
+        padding-top: 20px;
+        padding-left: 0;
+        min-width: 250px;
+    }
+
+    .proceed {
+        margin-top: 250px;
+    }
+
+    .section_3 {
+        margin-top: 0;
+    }
+
+    .section_3-title {
+        font-size: 30px;
+        min-width: 265px;
+    }
+
+    .section_3-paragraph {
+        font-size: 16px;
+        padding-top: 20px;
+        padding-left: 0;
+        margin-left: 0;
+        min-width: 260px;
+    }
+
+    .section_3-content {
+        margin-left: -20px;
+    }
+
+    .section_3-toggle {
+        width: 270px;
+    }
+    
+    .prototype_card {        
+        height:165px;
+        width:280px;
+        margin-top: 10px;
+    }
+
+    .section_4{
+        margin-top:2vh;
+    }
+
+    .section_4-title {
+        font-size: 30px;
+        min-width: 185px;
+    }
+
+    .section_4-paragraph {
+        font-size: 16px;                
+        padding-top: 20px;
+        padding-left: 0;
+        margin-left: 0;    
+        min-width: 230px;     
+    }
+
+    .skill_img {
+        height: 50px;        
+        width: 55px;
+        margin-left: 5px;    
+    }
+
+    .skills_content {
+        width: 300px;
+        margin-left: -13px;
+    }
+
+    .skills_content .skill_container {        
+        margin-left: 0;        
+    }
+
+    .skill_container {
+        height: auto;
+        width: 100px;
+        text-align: center;
+    }
+
+    .skill_title {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .section_5-title {
+        font-size: 30px;
+        margin-top: 0;
+        min-width: 170px;
+    }    
+
+    .info_section {
+        margin-left: -10%;
+    }
+
+    .info_section h6 {
+        font-size: 13px;    
+        width: 100%;
+        min-width: 250px;
+    }
+
+    .info_section span {
+        margin-right: 2%;
+    }    
+
+    .info_icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .contact_form-container {
+        width: 135%;
+        margin-left: -80px;
+    }
+
+    .form_input {
+        width: 100%;
+        min-width: 310px;
+    }
+
+    .text_input {
+        width: 100%;
+        min-width: 310px;
+        margin-left: 10px;
+    }
+
+    .form_input::placeholder {                      
+        font-size: 13px;
+    }
+
+    .submit_btn {
+        margin-left: 100px;
+    }
+}
+
+@media only screen and (max-width: 399px) {
+    .prof-container {
+        margin-left: 10%;
+        margin-top: -25px;
+    }
+
+    .prof-img {        
+        height: 150px !important;  
+        width: 150px !important; 
+    }
+
+    .egg{ 
+        left: 0 !important;
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .egg2{ 
+        left: 0 !important;
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .egg3{ 
+        left: 0 !important;
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .egg4{ 
+        left: 0 !important;
+        width: 200px !important;
+        height: 200px !important;
+    }
+
+    .profile-text {
+        top: 0;
+        left: 10px;        
+        transform: translate(0, 0); 
+        width: 100%;   
+        min-width: 250px;                    
+    }
+
+    .profile_name {
+        font-size: 30px;
+    }
+
+    .profile_title {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .section_2 {
+        margin-top: 5vh;                
+    }
+    
+    .section_2-img {
+        height: 140px;  
+        width: 250px;   
+        top: 350px;   
+        left: 135px;     
+    }
+    
+    .section_2-title {        
+        font-size: 30px;
+        min-width: 255px;
+    }
+    
+    .section_2-paragraph {        
+        font-size: 16px;
+        padding-top: 20px;
+        padding-left: 0;
+        min-width: 250px;
+    }
+
+    .proceed {
+        margin-top: 250px;        
+    }
+    
+    .section_3 {
+        margin-top: 0;
+    }
+
+    .section_3-title {
+        font-size: 30px;
+        min-width: 265px;
+    }
+
+    .section_3-paragraph {
+        font-size: 16px;
+        padding-top: 20px;
+        padding-left: 0;
+        margin-left: 0;
+        min-width: 260px;
+    }
+
+    .section_3-content {
+        margin-left: -20px;
+    }
+
+    .section_3-toggle {
+        width: 270px;
+    }
+    
+    .prototype_card {
+        padding: 5px;
+        height:165px;
+        width:280px;
+        margin-top: 10px;
+    }
+
+    .prototype {
+        height:165px;
+        width:280px;
+    }
+
+    .section_4{
+        margin-top:2vh;
+    }
+
+    .section_4-title {
+        font-size: 30px;
+        min-width: 185px;
+    }
+
+    .section_4-paragraph {
+        font-size: 16px;                
+        padding-top: 20px;
+        padding-left: 0;
+        margin-left: 0;    
+        min-width: 230px;     
+    }
+
+    .skill_img {
+        height: 50px;        
+        width: 55px;
+        margin-left: 5px;    
+    }
+
+    .skills_content {
+        width: 300px;
+        margin-left: -13px;
+    }
+
+    .skills_content .skill_container {        
+        margin-left: 0;        
+    }
+
+    .skill_container {
+        height: auto;
+        width: 100px;
+        text-align: center;
+    }
+
+    .skill_title {
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+    .section_5-title {
+        font-size: 30px;
+        margin-top: 0;
+        min-width: 170px;
+    }    
+
+    .info_section {
+        margin-left: -10%;
+    }
+
+    .info_section h6 {
+        font-size: 13px;    
+        width: 125%;
+        min-width: 250px;
+    }
+
+    .info_section span {
+        margin-right: 2%;
+    }    
+
+    .info_icon {
+        height: 40px;
+        width: 40px;
+    }
+
+    .contact_form-container {
+        width: 145%;
+        margin-left: -80px;
+    }
+
+    .form_input {
+        width: 100%;
+        min-width: 310px;
+    }
+
+    .text_input {
+        width: 100%;
+        min-width: 310px;
+        margin-left: 10px;
+    }
+
+    .form_input::placeholder {                      
+        font-size: 13px;
+    }
+
+    .submit_btn {
+        margin-left: 100px;
+    }
+}
+
+

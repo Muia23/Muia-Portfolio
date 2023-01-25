@@ -51,7 +51,7 @@ class collaborators(models.Model):
 
 class Profile(models.Model):
     profile_name = models.CharField(max_length = 100)
-    about = HTMLField()
+    profile_title = models.CharField(max_length = 100) 
     profile_image = models.URLField(max_length = 2000, blank=False)
 
     def __str__(self):

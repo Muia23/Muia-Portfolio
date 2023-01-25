@@ -1,0 +1,52 @@
+.vl {
+    border-left: 2px solid black;
+    height: 200px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 0;
+}
+
+.socials {
+    position: sticky;
+    bottom: 0;    
+    height: 100%;
+}
+
+.email {
+    position: sticky;
+    bottom: 0;    
+    height: 100%;              
+}
+
+.socials_icons {
+    list-style: none;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    bottom: 220px;
+    font-size: 22px;        
+}
+
+.socials_icons li {
+    padding: 12px 0;
+    margin-left: -25px !important;
+}
+
+.email p {
+    font-family: 'Source Code Pro', monospace;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-left: 0;
+    bottom: 220px;
+}
+
+.page {
+    background: #d6e9ff64;
+    overflow-y: scroll;
+    height: 100vh;
+}
+

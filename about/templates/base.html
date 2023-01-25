@@ -1,172 +1,64 @@
 {% load static %}
-{% load bootstrap4 %}
 <!DOCTYPE html>
 <html>
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-        <script src="https://kit.fontawesome.com/5acd6cd805.js" crossorigin="anonymous"></script>        
-        <title> Muia | Portfolio</title>    
+        <meta name="viewport" content="width=device-width, initial-scale=1">        
+        <meta name="theme-color" content="#108D95" /> 
+        <meta name="msapplication-navbutton-color" content="#084a4e" />        
+        <meta name="apple-mobile-web-app-status-bar-style" content="#084a4e" />                
+        <title>{% block title %} {{title|default:"This is Wilfred Muema Muia "}} {% endblock %} </title>    
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">       
+        <!-- <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        <link href="{% static 'css/base.css' %}" rel="stylesheet"/>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Roboto:wght@300;400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">                
+        {% block extend_head %}
+        {% endblock %}
     </head>
     <body>
-        <div class="container-fluid content" >
-            <div class="row landing" >                                                   
-                <div class="col-md-2"></div>
-                <div class="col-md-6">
-                    <div class="container landing-txt">
-                        <h3 class="name-txt">I'm Wilfred Muema</h3> 
-                        <h5 class="skill-txt">FullStack Developer</h5>
-                    </div>            
-                </div>              
-                <div class="col-md-3">
-                    <div class="container img-cont">
-                        <div class="prof-img-handler">
-                            <img src="{% static 'images/profile.jpg' %}" class="prof-img"> <!--{{profile.profile_image}}-->
-                        </div>                    
-                    </div>            
+        <div class="container-fluid content" >            
+            <div class="row"  style="height: 100vh;">
+                <div class="col-sm-1 order-sm-first order-last socials_col" style="position: relative; overflow-y:hidden;">                    
+                    <a id="socials">
+                        <div class="socials">
+                            <ul class="socials_icons">
+                                <li><i class="bi bi-github"></i></li>
+                                <li><i class="bi bi-linkedin"></i></li>
+                                <li><i class="bi bi-instagram"></i></li>
+                            </ul>
+                            <div class="vl"></div>
+                        </div>
+                    </a>
                 </div>
-                <div class="col-md-1"></div> 
-                <p style="display: inline-block;" id="project3"></p>
-                <p style="display: inline-block;" id="about3"></p>                                        
-            </div>               
-            <div class="row">                
-                <div class="col-md-9" style="border-right: solid 0.01rem #b5b5b5;">                      
-                    <div class="container" style="text-align: center;">
-                        <div class="row">
-                            <a class="col navig" href="{% url 'home'%}" id="about2">
-                                <h6 class="navigation" id="about1">About Me</h6>
-                            </a>
-                            <a class="col navig" href="{% url 'projects'%}" id="project2">
-                                <h6 class="navigation" id="project1">My Projects</h6>
-                            </a>
-                        </div>                
-                    </div>
-                    <div class="container-fluid">
-                        {% block content %} 
-                        
-                        {% endblock %}
-                    </div> 
+                <div class="col-sm-10" style="height:100%;">                    
+                    <a id="content">
+                        <div class="container-fluid"  style="height:96%; overflow-y:auto;">
+                            {% block content %} 
+
+                            {% endblock %}                                        
+                        </div>
+                    </a>
+                    <div class="toggles" style="text-align: center; display: none;">
+                        <a href="#socials"  style="background: #108c9593;padding: 5px 10px;color: white;"><i class="bi bi-chevron-double-down"></i></a>                    
+                        <a href="#content"  style="background: #108c9593;padding: 5px 10px;color: white;"><i class="bi bi-chevron-double-up"></i></a>                    
+                    </div>                    
                 </div>
-                <div class="col-md-3" style="background:#eeeeee; z-index: -1;">                                    
-                    <h6 onclick="viewHskills()" style="padding: 10px 20px; position: relative;">Hard Skills <span id="arrow1" class="arrowdown" style="position: absolute; right: 5px;"><i class="fas fa-angle-double-down"></i></span></h6>
-                    <hr style="margin-top: -5px;">
-                    <div class="container" id="hskills">
-                        <div class="skill">
-                            <p>Visual Design Skills</p>
-                            <div class="skill-bar skill1 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>Software Development</p>
-                            <div class="skill-bar skill2 wow slideInLeft animated">                         
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>Database Management</p>
-                            <div class="skill-bar skill3 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>Problem Solving</p>
-                            <div class="skill-bar skill4 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>Critical Thinking</p>
-                            <div class="skill-bar skill5 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>Adaptability</p>
-                            <div class="skill-bar skill6 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>Programming</p>
-                            <div class="skill-bar skill6 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                    </div>                
-                    <h6 onclick="viewSskills()" style="padding: 10px 20px; position: relative; margin-top: -10px;">Software Skills <span id="arrow2" class="arrowdown" style="position: absolute; right: 5px;"><i class="fas fa-angle-double-down"></i></span></h6>
-                    <hr style="margin-top: -5px;">  
-                    <div class="container" id="sskills">
-                        <div class="skill">
-                            <p>HTML5</p>
-                            <div class="skill-bar skill1 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>CSS3</p>
-                            <div class="skill-bar skill2 wow slideInLeft animated">                         
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>JavaScript</p>
-                            <div class="skill-bar skill3 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>React</p>
-                            <div class="skill-bar skill4 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>Angular</p>
-                            <div class="skill-bar skill5 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>C++</p>
-                            <div class="skill-bar skill6 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>Python</p>
-                            <div class="skill-bar skill6 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>Python</p>
-                            <div class="skill-bar skill6 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>PHP</p>
-                            <div class="skill-bar skill6 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>Deployment</p>
-                            <div class="skill-bar skill6 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                    </div>                
-                    <h6 onclick="viewFrmwrks()" style="padding: 10px 20px; position: relative; margin-top: -10px;">Frameworks <span id="arrow3" class="arrowdown" style="position: absolute; right: 5px;"><i class="fas fa-angle-double-down"></i></span></h6>
-                    <hr style="margin-top: -5px;">
-                    <div class="container" id="frameworks">
-                        <div class="skill">
-                            <p>Django</p>
-                            <div class="skill-bar skill1 wow slideInLeft animated">                        
-                            </div>
-                        </div>
-                        <div class="skill">
-                            <p>Flask</p>
-                            <div class="skill-bar skill2 wow slideInLeft animated">                         
-                            </div>
-                        </div>
-                    </div>                
-                    <h6 onclick="viewHobbies()" style="padding: 10px 20px; position: relative; margin-top: -10px;">Hobbies <span id="arrow4" class="arrowdown" style="position: absolute; right: 5px;"><i class="fas fa-angle-double-down"></i></span></h6>
-                    <hr style="margin-top: -5px;">
-                    <ul id="hobbies">
-                        <li><i class="fas fa-drum"></i></li>
-                        <li><i class="fas fa-swimming-pool"></i></li> 
-                        <li><i class="fas fa-utensils"></i></li>
-                    </ul>
-                    <br>
-                </div>            
-            </div> 
+                <div class="col-sm-1 email_col" style="position: relative; overflow-y:hidden;">
+                    <div class="email">
+                        <p>wilfredmuema@gmail.com</p>
+                        <div class="vl"></div>
+                    </div>                    
+                </div>
+            </div>            
+            
         </div>            
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>        
+        <!-- <script src="semantic/dist/semantic.min.js"></script> -->
+        <script src="https://kit.fontawesome.com/5acd6cd805.js" crossorigin="anonymous"></script>        
         <script id="dsq-count-scr" src="//zonkmusic.disqus.com/count.js" async></script>       
     </body>
     <style>            
@@ -176,47 +68,12 @@
 
         .content {
             height: 100vh;
-            overflow-y: auto;
+            background: linear-gradient(#d6e9ff9f,#d6e9ff9f), url('https://static.wixstatic.com/media/5498a7_2e2797aa14f44b038a948a42b35c877d~mv2.jpg');
+            background-size: cover;            
+            overflow-y: auto;            
             -ms-overflow-style: none;
             scrollbar-width: none; 
-        }
-
-        #hskills {
-            display: block;
-            width: 90%;
-        }
-
-        #sskills {
-            display: none;
-            width: 90%;
-        }
-
-        #frameworks {
-            display: none;
-            width: 90%;
-        }
-
-        #hobbies {
-            display: none;
-            width: 90%;
-            list-style: none;        
-        }
-
-        #hobbies li {
-            display: inline-block;
-            font-size: 25px;
-            padding: 7px;
-        }
-
-        .landing {          
-            background-image: url('https://images.unsplash.com/photo-1583339824000-5afecfd41835?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&dl=daniele-levis-pelusi-mkMSXR86kYY-unsplash.jpg'); 
-            background-size: cover;    
-            background-repeat: no-repeat;        
-            height: max-content;   
-            box-shadow: 1px 5px 7px #afafaf;
-            background-position: 100% 100%;
-
-        }
+        }         
 
         @media screen and (min-width: 291px) and (max-width:354px){            
             .landing {
@@ -260,6 +117,22 @@
                 margin-top: 60%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+            }            
+        }
+
+        @media screen and (max-width:575px) {
+            .socials_col {
+                width:50%;
+                height: 96%;
+            }
+
+            .email_col {
+                width: 50%;
+                height: 96%;
+            }
+
+            .toggles {
+                display: block !important;
             }
         }
 
@@ -271,27 +144,12 @@
             padding: 10px;
             align-items: center;
         }
-
-        .prof-img-handler {
-            position: relative;            
-            overflow: hidden;
-            border-radius: 50%;    
-            height: 200px;  
-            width: 200px;       
-            align-items: center;   
-        }
-
-        .prof-img {            
-            height: 250px;  
-            width: 200px;                           
-        }
-
+        
         .navigation {
              display: inline-block;                                         
              padding: 15px;
         }
         
-
         .navig h6 {           
             color: rgb(84, 83, 83);
         }
@@ -495,4 +353,6 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
     <script href="//stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    {% block extend_footer %}
+    {% endblock %}
 </html>

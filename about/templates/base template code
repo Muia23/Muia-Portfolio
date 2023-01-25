@@ -1,0 +1,233 @@
+<!-- <div class="row landing" >                                                   
+                <div class="col-md-2"></div>
+                <div class="col-md-6">
+                    <div class="container landing-txt">
+                        <h3 class="name-txt">I'm Wilfred Muema</h3> 
+                        <h5 class="skill-txt">FullStack Developer</h5>
+                    </div>            
+                </div>              
+                <div class="col-md-3">
+                    <div class="container img-cont">
+                        <div class="prof-img-handler">
+                            <img src="https://static.wixstatic.com/media/5498a7_6f422724458e4a84919be9bf7eefeb84~mv2.png" class="prof-img"> {{profile.profile_image}}
+                        </div>                    
+                    </div>            
+                </div>
+                <div class="col-md-1"></div> 
+                <p style="display: inline-block;" id="project3"></p>
+                <p style="display: inline-block;" id="about3"></p>                                        
+            </div>               
+            <div class="row">                
+                <div class="col-md-9" style="border-right: solid 0.01rem #b5b5b5;">                      
+                    <div class="container" style="text-align: center;">
+                        <div class="row">
+                            <a class="col navig" href="{% url 'home'%}" id="about2">
+                                <h6 class="navigation" id="about1">About Me</h6>
+                            </a>
+                            <a class="col navig" href="{% url 'projects'%}" id="project2">
+                                <h6 class="navigation" id="project1">My Projects</h6>
+                            </a>
+                        </div>                
+                    </div>
+                    <div class="container-fluid">
+                        {% block content %} 
+                        
+                        {% endblock %}
+                    </div> 
+                </div>
+                <div class="col-md-3" style="background:#eeeeee; z-index: -1;">                                    
+                    <h6 onclick="viewHskills()" style="padding: 10px 20px; position: relative;">Hard Skills <span id="arrow1" class="arrowdown" style="position: absolute; right: 5px;"><i class="fas fa-angle-double-down"></i></span></h6>
+                    <hr style="margin-top: -5px;">
+                    <div class="container" id="hskills">
+                        <div class="skill">
+                            <p>Visual Design Skills</p>
+                            <div class="skill-bar skill1 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Software Development</p>
+                            <div class="skill-bar skill2 wow slideInLeft animated">                         
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Database Management</p>
+                            <div class="skill-bar skill3 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Problem Solving</p>
+                            <div class="skill-bar skill4 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Critical Thinking</p>
+                            <div class="skill-bar skill5 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Adaptability</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Programming</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                    </div>                
+                    <h6 onclick="viewSskills()" style="padding: 10px 20px; position: relative; margin-top: -10px;">Software Skills <span id="arrow2" class="arrowdown" style="position: absolute; right: 5px;"><i class="fas fa-angle-double-down"></i></span></h6>
+                    <hr style="margin-top: -5px;">  
+                    <div class="container" id="sskills">
+                        <div class="skill">
+                            <p>HTML5</p>
+                            <div class="skill-bar skill1 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>CSS3</p>
+                            <div class="skill-bar skill2 wow slideInLeft animated">                         
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>JavaScript</p>
+                            <div class="skill-bar skill3 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>React</p>
+                            <div class="skill-bar skill4 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Angular</p>
+                            <div class="skill-bar skill5 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>C++</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Python</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Python</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>PHP</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Deployment</p>
+                            <div class="skill-bar skill6 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                    </div>                
+                    <h6 onclick="viewFrmwrks()" style="padding: 10px 20px; position: relative; margin-top: -10px;">Frameworks <span id="arrow3" class="arrowdown" style="position: absolute; right: 5px;"><i class="fas fa-angle-double-down"></i></span></h6>
+                    <hr style="margin-top: -5px;">
+                    <div class="container" id="frameworks">
+                        <div class="skill">
+                            <p>Django</p>
+                            <div class="skill-bar skill1 wow slideInLeft animated">                        
+                            </div>
+                        </div>
+                        <div class="skill">
+                            <p>Flask</p>
+                            <div class="skill-bar skill2 wow slideInLeft animated">                         
+                            </div>
+                        </div>
+                    </div>                
+                    <h6 onclick="viewHobbies()" style="padding: 10px 20px; position: relative; margin-top: -10px;">Hobbies <span id="arrow4" class="arrowdown" style="position: absolute; right: 5px;"><i class="fas fa-angle-double-down"></i></span></h6>
+                    <hr style="margin-top: -5px;">
+                    <ul id="hobbies">
+                        <li><i class="fas fa-drum"></i></li>
+                        <li><i class="fas fa-swimming-pool"></i></li> 
+                        <li><i class="fas fa-utensils"></i></li>
+                    </ul>
+                    <br>
+                </div>            
+            </div>  -->
+            /* .landing {
+                background: green;
+                height: 30vh;            
+            }
+            
+            @media screen and (min-width: 200px) and (max-width:480px){            
+                .landing {
+                    height: 91vh;
+                    text-align: center;
+                }            
+            
+                .img-cont {
+                    position: absolute;
+                    margin-top: -50%;
+                    align-self: center;                
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            
+                .landing-txt {
+                    position: absolute;                
+                    margin-top: 70%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+            
+            .landing-txt {
+                padding: 25px;
+            }
+            
+            .img-cont {
+                padding: 10px;
+                align-items: center;
+            }
+            
+            .prof-img {
+                position: relative;   
+                height: 200px;  
+                width: 200px;                           
+            }
+            
+            .navigation {
+                 display: inline-block;                                         
+                 padding: 15px;
+            }
+            
+            
+            .navig h6 {           
+                color: rgb(84, 83, 83);
+            }
+            
+            #about2:hover {
+                background: #dbdddf; 
+                background: -webkit-linear-gradient(to left, #c7c6c6c7, #cccbcbbf);
+                background: linear-gradient(to left, #ebebebc7, #f9f9f9bf);
+                border-right: solid 0.01rem #b8b7b7;  
+                font-weight: 600;          
+            }
+            
+            #project2:hover {
+                background: #dbdddf; 
+                background: -webkit-linear-gradient(to right, #c7c6c6c7, #cccbcbbf);
+                background: linear-gradient(to right, #ebebebc7, #f9f9f9bf);
+                border-left: solid 0.01rem #b8b7b7;        
+                font-weight: 600;    
+            }
+            
+            #about1:hover {
+                font-weight: 600;       
+            }
+            
+            #project1:hover {
+                font-weight: 600;       
+            } */
+            
+            

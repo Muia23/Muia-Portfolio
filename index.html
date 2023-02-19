@@ -1,79 +1,300 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Wilfred</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">        
+    <meta name="theme-color" content="#108D95" /> 
+    <meta name="msapplication-navbutton-color" content="#084a4e" />        
+    <meta name="apple-mobile-web-app-status-bar-style" content="#084a4e" />
+    <title>This is Wilfred Muema Muia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="css/styles.css" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Red+Hat+Display&family=Roboto:wght@300;400;700&family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <style>
+      .container::-webkit-scrollbar {
+          display: none;            
+      }
+      
+      .content {
+          height: 100vh;
+          background: linear-gradient(#d6e9ff9f,#d6e9ff9f), url('https://static.wixstatic.com/media/5498a7_2e2797aa14f44b038a948a42b35c877d~mv2.jpg');
+          background-size: cover;            
+          overflow-y: auto;            
+          -ms-overflow-style: none;
+          scrollbar-width: none; 
+      }
+    </style>
   </head>
   <body>
-    <section class="hero">
-      <div class="hero-text">
-        <div class="avatar animate__animated animate__backInDown">
-          <img src="https://static.wixstatic.com/media/5498a7_ed56a11b333e4f1aa7c4205779cdfff3~mv2.jpg"  alt="avatar"><!--images/avatar.png-->
-        </div>
-        <h1 class="avatar animate__animated animate__backInDown"> I am Wilfred Muema</h1>
-        <p class="avatar animate__animated animate__backInDown">And I'm a web developer</p>
-      </div>
-      <div class="waves"></div>
-    </section>
-    <section>
-      <div class="row">
-        <div class="column1" onclick="openTab('b1');">
-          <h2>About Me</h2>
-        </div>
-        <div class="column2" onclick="openTab('b2');">
-          <h2>My Projects</h2>
-        </div>
-      </div>
-      <div id="b1" class="containerTab">
-        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-        <div class="content">
-          <div class="about">
-           <p>Being an IT student has made me enjoy and be passionate about code. HTML, CSS, JavaScript, Java, PHP, C++, you name it. 
-            Knowing code and being able to use it to make cool stuff such as Websites and softwares is a big deal for me. 
-            My ambition is to make systems and softwares that can really help impact my community and later on get to be a game developer, if it's not hard. I game a lot.</p>
-           <p>My interests are in tech, AI mostly and gadgets. AI will take over the world definitely. But also I follow NBA and football: EPL, Laliga, farmers league and KPL, not so much.
-             </p>
-          </div>
-        </div>
-      </div>
-      <div id="b2" class="containerTab">
-        <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
-        <div class="content">
-          <div class="project">
-          <ul>
-            <li>
-              <h5><a href="https://muia23.github.io/AkanName/">Akan Name Calculator</a></h5>
-              <p><a href="https://muia23.github.io/AkanName/"><img src="images/akan.png" alt="Akan" style="width:250px;height:150px;margin-right:15px;float:right;"></a>Inspired by Ghanaian culture where they used a naming system known as The Akan naming system. I was able to develop a calculator which the user inputs their birthday credentials, it will be able to back date to the day they were born and from that information, be able to predict their Akan name.Sounds cool right, give it a try!</p>
-            </li>
-            <br>
-            <li>
-              <h5><a href="https://muia23.github.io/PizzaMama/">PizzaMama website</a></h5>
-              <p><a href="https://muia23.github.io/PizzaMama/"><img src="images/pizza.png" alt="Akan" style="width:250px;height:150px;margin-right:15px;float:left;"></a>A pizza ordering website, which allows the user to fully customize their Italian dish starting from the size, crust, to toppings.Everything to detail, just like the customer wants it to be. It also allows the user to make use of the delivery services by entering a delivery location. Delivery has never been much easier.</p>
-            </li>
-            <br>
-          </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section>
-      <!--Contacts section-->
-      <div class="footer">
-       <div class="contacts">
-          <p>Contact me on:</p>
-          <!-- <ol>
-            <li><a href="https://web.facebook.com/?_rdc=1&_rdr"><i class="fa fa-facebook"></a>  wil_code</li>
-            <li><a href="https://twitter.com/explore"><i class="fa fa-twitter"></a>  @wilcode</li>
-            <li><a href="https://www.instagram.com/"><i class="fa fa-instagram"></a>  @_wil_code</li>
-          </ol>
-        </div>-->
-      </div>
-    </section>
+    <div class="container-fluid content" >            
+        <div class="row"  style="height: 100vh;">
+            <div class="col-sm-1 order-sm-first order-last socials_col" style="position: relative; overflow-y:hidden;">                    
+                <a id="socials">
+                    <div class="socials">
+                        <ul class="socials_icons">
+                            <li><i class="bi bi-github"></i></li>
+                            <li><i class="bi bi-linkedin"></i></li>
+                            <li><i class="bi bi-instagram"></i></li>
+                        </ul>
+                        <div class="vl"></div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-10" style="height:100%;">                    
+                <a id="content">
+                    <div class="container-fluid"  style="height:96%; overflow-y:auto;">
+                      <div class="container">  
+                        <br><br>
+                        <div class="row profile_section">
+                            <div class="col"></div>
+                            <div class="col-sm-8 profile_section-col">
+                                <div class="row">                            
+                                    <div class="col-lg-5">
+                                        <div class="container prof-container">
+                                            <img src="https://static.wixstatic.com/media/5498a7_ed56a11b333e4f1aa7c4205779cdfff3~mv2.jpg" class="prof-img"> 
+                                            <div class="egg-holder">
+                                                <div class="egg"></div>
+                                                <div class="egg2"></div>
+                                                <div class="egg3"></div>
+                                                <div class="egg4"></div>
+                                            </div>                                    
+                                        </div>                                  
+                                   </div>                           
+                                   <div class="col-lg-7" style=" position: relative;">
+                                       <div class="profile-text">
+                                        <h1 class="profile_name">WILFRED MUEMA</h1>
+                                        <h3 class="profile_title">WEB DESIGN & FULL-STACK DEVELOPER</h3>
+                                       </div>                                
+                                   </div>
+                                </div>
+                            </div>                    
+                            <div class="col"></div>
+                        </div>
+                        <br><br>                
+                        <div class="row section_2">
+                            <div class="col"></div>
+                            <div class="col-sm-9">
+                                <div class="row">
+                                    <div class="col-sm-5" style="position: relative;">
+                                        <img src="https://static.wixstatic.com/media/5498a7_b8363590973e49dd95a87f62091d11c4~mv2.png" class="section_2-img">
+                                    </div>
+                                    <div class="col-sm-7">
+                                        <h2 class="section_2-title">Websites done right.</h2>
+                                        <p class="section_2-paragraph">An enthusiastic full-stack developer based in Nairobi, Kenya. 
+                                            I enjoy building everything from small business sites to rich interactive web apps. 
+                                            If you are a business seeking a web presense or an employer looking to hire, 
+                                            you can get in touch with me here.
+                                        </p>
+                                        <div class="container proceed">
+                                            <button class="btn client">I need a website <i class="bi bi-chevron-right"></i></button>
+                                            <button class="btn hire">I'm looking to hire <i class="bi bi-chevron-right"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <br><br>
+                        <div class="row section_3">
+                            <div class="col"></div>
+                            <div class="col-sm-10">
+                                <h2 class="section_3-title">I build things for the web.</h2>
+                                <p class="section_3-paragraph">
+                                    Being a believer in learning by doing and having fun.
+                                     I focus on “What?” to produce and “How” it will best serve the target users.
+                                     Here are some of my greatest works
+                                </p>
+                                <br><br>
+                                <div class="container section_3-content">
+                                    <div class="section_3-toggle">
+                                        <h6 class="prototypes-toggle active" id="prototypes" >Prototypes</h6>
+                                        <h6 class="projects-toggle" id="projects" >Projects</h6>
+                                        <br>
+                                        <hr style="margin-top: -10px;">
+                                    </div>                                                                                                                
+                                    <div class="prototypes-display row" id="proto" style="display: flex;">
+                                        <div class="col">
+                                            <div class="card prototype_card">
+                                                <div class="prototype_platform">
+                                                    <div class="prototype_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_e95646ddda5a4834a75f873d0b738c2b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                                </div>
+                                                <div class="prototype" style="background: url('https://static.wixstatic.com/media/5498a7_a4a3eb20a49c4055a7a872736c88c6b7~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card prototype_card">
+                                                <div class="prototype_platform">
+                                                    <div class="prototype_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_e95646ddda5a4834a75f873d0b738c2b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                                </div>
+                                              <div class="prototype" style="background: url('https://static.wixstatic.com/media/5498a7_a8825354c0434e8ebaf849bac66d0e99~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                            </div>
+                                        </div>                                                                    
+                                        <div class="col">
+                                            <div class="card prototype_card">
+                                                <div class="prototype_platform">
+                                                    <div class="prototype_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_e95646ddda5a4834a75f873d0b738c2b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                                </div>
+                                              <div class="prototype" style="background: url('https://static.wixstatic.com/media/5498a7_9c04196017fd4b2c805fcc8c07fbf0ba~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="card prototype_card">
+                                                <div class="prototype_platform">
+                                                    <div class="prototype_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_e95646ddda5a4834a75f873d0b738c2b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                                </div>
+                                              <div class="prototype" style="background: url('https://static.wixstatic.com/media/5498a7_778fa32b77244e90b2d623f0fa37c5a0~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                            </div>
+                                        </div>                                                                                            
+                                    </div>
+                                    <div class="projects-display" id="proje" style="display: none;">                                                            
+                                        <div class="card project_card">                                          
+                                            <div class="project_overlay">
+                                                <div class="project_platform">
+                                                    <div class="project_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_f052b54178e44a1aa3696d386a12524b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project" style="background: url('https://static.wixstatic.com/media/5498a7_4481c6dda57f4298b076d8a9a6ea8f53~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        </div>                                                                        
+                                        <div class="card project_card">                                          
+                                            <div class="project_overlay">
+                                                <div class="project_platform">
+                                                    <div class="project_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_23c59c87615b4614afb2d46e7398dd48~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project" style="background: url('https://static.wixstatic.com/media/5498a7_7ea2261d790b4726bc7e018e91abeb62~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        </div>                                                                        
+                                        <div class="card project_card">                                          
+                                            <div class="project_overlay">
+                                                <div class="project_platform">
+                                                    <div class="project_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_23c59c87615b4614afb2d46e7398dd48~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project" style="background: url('https://static.wixstatic.com/media/5498a7_9674bffe24204ef7958d6f42e0f8041a~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        </div>                                                                        
+                                        <div class="card project_card">                                          
+                                            <div class="project_overlay">
+                                                <div class="project_platform">
+                                                    <div class="project_platform_img" style="background: url('https://static.wixstatic.com/media/5498a7_23c59c87615b4614afb2d46e7398dd48~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                                </div>
+                                            </div>
+                                            <div class="project" style="background: url('https://static.wixstatic.com/media/5498a7_5ffcdb4fc4de4178a38e3a8f68408388~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        </div>                                                                     
+                                    </div>
+                                </div>                        
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <br><br>
+                        <div class="row section_4">
+                            <div class="col"></div>
+                            <div class="col-sm-10">
+                                <h2 class="section_4-title">Skills & Tools</h2>
+                                <p class="section_4-paragraph">The skills, tools and technologies I use to bring your products to life:</p>
+                                <br><br>
+                                <div class="skills_content">
+                                    <div class="skill_container">
+                                        <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_67ea716a4ff043af8684ab8725e61e2b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        <div class="skill_title">HTML5</div>
+                                    </div>
+                                    <div class="skill_container">
+                                        <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_67ea716a4ff043af8684ab8725e61e2b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        <div class="skill_title">CSS3</div>
+                                    </div>
+                                    <div class="skill_container">
+                                        <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_80d7379d75df4c8ba978a4ecd5129a19~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        <div class="skill_title">JavaScript</div>
+                                    </div>
+                                    <div class="skill_container">
+                                        <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_da27c8627aff4358b1f0e0785e41d3f9~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        <div class="skill_title">jQuery</div>
+                                    </div>
+                                    <div class="skill_container">
+                                        <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_c7f2e988d9374bc1bdb74216a5ae57eb~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        <div class="skill_title">React</div>
+                                    </div>                            
+                                    <div class="skill_container">
+                                        <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_1f947c0cd5d0487e972d43765b743977~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        <div class="skill_title">SASS</div>
+                                    </div>
+                                    <div class="skill_container">
+                                        <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_c6df01af071c48f0a0827bc33306f2be~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        <div class="skill_title">Figma</div>
+                                    </div>
+                                    <div class="skill_container">
+                                        <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_1ec0a78b527542da8e9b3711e951c89b~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        <div class="skill_title">Angular</div>
+                                    </div>
+                                    <div class="skill_container">
+                                        <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_5d446a6e65884320a7540dd3c6eb250c~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        <div class="skill_title">Docker</div>
+                                    </div>
+                                    <div class="skill_container">
+                                        <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_5a62151f96a14cd99344f80555ce2008~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        <div class="skill_title">Django</div>
+                                    </div>
+                                    <div class="skill_container">
+                                        <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_7a8f5a2da6d3417c9c2cbf5d758aecf9~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        <div class="skill_title">RESTful APIs</div>
+                                    </div>
+                                    <div class="skill_container">
+                                        <div class="skill_img" style="background: url('https://static.wixstatic.com/media/5498a7_55422757dde84e27adf6f55ad79c1d88~mv2.png');background-size: contain;background-repeat: no-repeat;background-position: center;"></div>
+                                        <div class="skill_title">Responsive Websites</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                        <br><br>
+                        <div class="row section_5">
+                            <div class="col"></div>
+                            <div class="col-sm-11">
+                                <h2 class="section_5-title">Get in Touch</h2>
+                                <div class="row section_5-row">
+                                    <div class="col-md-3 info_section">
+                                        <h6 style="width: 200px;"> <span> <img class="info_icon" src="https://static.wixstatic.com/media/5498a7_476ba9f635c748d1a7a42c85ae92c410~mv2.png"> </span> Nairobi, Kenya</h6>
+                                        <h6 style="width: 280px;"> <span> <img class="info_icon" src="https://static.wixstatic.com/media/5498a7_953ff552c58d426e87ac86b4ec997814~mv2.png"> </span> wilfredmuema@gmail.com</h6>
+                                        <h6 style="width: 235px;"> <span> <img class="info_icon" src="https://static.wixstatic.com/media/5498a7_2b458719e2a6492fa65960f244af8334~mv2.png"> </span> +254-714-862-024</h6>
+                                    </div>                            
+                                    <div class="col-md-9 contact_section">
+                                        <div class="container contact_form-container">
+                                            <form class="contact_form">                                                                                                                            
+                                                <input type="text" class="form-control form_input" placeholder="First Name">                                                                                        
+                                                <input type="text" class="form-control form_input" placeholder="Second Name">                                                                                        
+                                                <input type="email" class="form-control form_input" placeholder="Email" required>                                                                                        
+                                                <input type="number" class="form-control form_input" style="margin-bottom: 15px !important;" placeholder="Phone" required>
+                                                <textarea class="form-control form_input text_input" rows="4" placeholder="Enter your message..." required></textarea>
+                                                <button class="btn submit_btn">Submit</button>
+                                            </form>                                                                                                                                                                                                                               
+                                            <br><br><br><br>
+                                        </div>
+                                    </div>                            
+                                </div>
+                            </div>
+                            <div class="col"></div>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+                <div class="toggles" style="text-align: center; display: none;">
+                    <a href="#socials"  style="background: #108c9593;padding: 5px 10px;color: white;"><i class="bi bi-chevron-double-down"></i></a>                    
+                    <a href="#content"  style="background: #108c9593;padding: 5px 10px;color: white;"><i class="bi bi-chevron-double-up"></i></a>                    
+                </div>                    
+            </div>
+            <div class="col-sm-1 email_col" style="position: relative; overflow-y:hidden;">
+                <div class="email">
+                    <p>wilfredmuema@gmail.com</p>
+                    <div class="vl"></div>
+                </div>                    
+            </div>
+        </div>                    
+    </div>      
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>                
+    <script src="https://kit.fontawesome.com/5acd6cd805.js" crossorigin="anonymous"></script>        
+    <script id="dsq-count-scr" src="//zonkmusic.disqus.com/count.js" async></script>      
     <script src="js/scripts.js"></script>      
   </body>
 </html>

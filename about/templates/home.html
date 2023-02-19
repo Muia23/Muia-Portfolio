@@ -9,15 +9,17 @@
                 <br><br>
                 <div class="row profile_section">
                     <div class="col"></div>
-                    <div class="col-sm-8">
+                    <div class="col-sm-8 profile_section-col">
                         <div class="row">                            
                             <div class="col-lg-5">
                                 <div class="container prof-container">
                                     <img src="https://static.wixstatic.com/media/5498a7_ed56a11b333e4f1aa7c4205779cdfff3~mv2.jpg" class="prof-img"> 
-                                    <div class="egg"></div>
-                                    <div class="egg2"></div>
-                                    <div class="egg3"></div>
-                                    <div class="egg4"></div>
+                                    <div class="egg-holder">
+                                        <div class="egg"></div>
+                                        <div class="egg2"></div>
+                                        <div class="egg3"></div>
+                                        <div class="egg4"></div>
+                                    </div>                                    
                                 </div>                                  
                            </div>                           
                            <div class="col-lg-7" style=" position: relative;">
@@ -67,12 +69,12 @@
                         <br><br>
                         <div class="container section_3-content">
                             <div class="section_3-toggle">
-                                <h6 class="prototypes-toggle" >Prototypes</h6>
-                                <h6 class="projects-toggle" >Projects</h6>
+                                <h6 class="prototypes-toggle active" id="prototypes" >Prototypes</h6>
+                                <h6 class="projects-toggle" id="projects" >Projects</h6>
                                 <br>
                                 <hr style="margin-top: -10px;">
                             </div>                                                                                                                
-                            <div class="prototypes-display row">
+                            <div class="prototypes-display row" id="proto" style="display: flex;">
                                 <div class="col">
                                     <div class="card prototype_card">
                                         <div class="prototype_platform">
@@ -106,7 +108,7 @@
                                     </div>
                                 </div>                                                                                            
                             </div>
-                            <div class="projects-display" style="display: none;">                                                            
+                            <div class="projects-display" id="proje" style="display: none;">                                                            
                                 <div class="card project_card">                                          
                                     <div class="project_overlay">
                                         <div class="project_platform">
@@ -209,22 +211,22 @@
                     <div class="col"></div>
                     <div class="col-sm-11">
                         <h2 class="section_5-title">Get in Touch</h2>
-                        <div class="row">
+                        <div class="row section_5-row">
                             <div class="col-md-3 info_section">
-                                <h6> <span> <img class="info_icon" src="https://static.wixstatic.com/media/5498a7_476ba9f635c748d1a7a42c85ae92c410~mv2.png"> </span> Nairobi, Kenya</h6>
-                                <h6> <span> <img class="info_icon" src="https://static.wixstatic.com/media/5498a7_953ff552c58d426e87ac86b4ec997814~mv2.png"> </span> wilfredmuema@gmail.com</h6>
-                                <h6> <span> <img class="info_icon" src="https://static.wixstatic.com/media/5498a7_2b458719e2a6492fa65960f244af8334~mv2.png"> </span> +254-714-862-024</h6>
+                                <h6 style="width: 200px;"> <span> <img class="info_icon" src="https://static.wixstatic.com/media/5498a7_476ba9f635c748d1a7a42c85ae92c410~mv2.png"> </span> Nairobi, Kenya</h6>
+                                <h6 style="width: 280px;"> <span> <img class="info_icon" src="https://static.wixstatic.com/media/5498a7_953ff552c58d426e87ac86b4ec997814~mv2.png"> </span> wilfredmuema@gmail.com</h6>
+                                <h6 style="width: 235px;"> <span> <img class="info_icon" src="https://static.wixstatic.com/media/5498a7_2b458719e2a6492fa65960f244af8334~mv2.png"> </span> +254-714-862-024</h6>
                             </div>                            
-                            <div class="col-md-9">
+                            <div class="col-md-9 contact_section">
                                 <div class="container contact_form-container">
                                     <form class="contact_form">                                                                                                                            
                                         <input type="text" class="form-control form_input" placeholder="First Name">                                                                                        
                                         <input type="text" class="form-control form_input" placeholder="Second Name">                                                                                        
-                                        <input type="email" class="form-control form_input" placeholder="Email">                                                                                        
-                                        <input type="tel" class="form-control form_input" style="margin-bottom: 15px !important;" placeholder="Phone">                                                                                        
-                                        <textarea class="form-control form_input text_input" rows="4" placeholder="Enter your message..."></textarea>                                                                                                                                                                                                                                                      
-                                    </form>                                                                            
-                                    <button class="btn submit_btn">Submit</button>                                                                                                               
+                                        <input type="email" class="form-control form_input" placeholder="Email" required>                                                                                        
+                                        <input type="number" class="form-control form_input" style="margin-bottom: 15px !important;" placeholder="Phone" required>
+                                        <textarea class="form-control form_input text_input" rows="4" placeholder="Enter your message..." required></textarea>
+                                        <button class="btn submit_btn">Submit</button>
+                                    </form>                                                                                                                                                                                                                               
                                     <br><br><br><br>
                                 </div>
                             </div>                            
@@ -234,6 +236,6 @@
                 </div>
             </div>  
     {% block extend_footer %}                                                
-        <script src="{% static 'js/home.js' %}" ></script>             
+        <script src="{% static 'js/home.js' %}" ></script>                             
     {% endblock %}
 {% endblock %}

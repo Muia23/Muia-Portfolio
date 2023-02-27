@@ -647,11 +647,13 @@
 }
 
 .info_icon {    
-    background: white;
+    /* background: white;
     border-radius: 50%;
     padding: 15px;
     font-size: 20px;
-    margin-right: 10px;
+    margin-right: 10px; */
+    height: 60px;
+    width: 60px;
 }
 
 @media only screen and (min-width: 1201px) {

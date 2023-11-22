@@ -1,51 +1,76 @@
-{% extends 'base.html' %}
-    {% load static %}
-    
-    {% block styles %}                    
-        <link href="{% static 'css/projects.css' %}" rel="stylesheet"/>           
-    {% endblock %}                                 
-
-    {% block content %}   
-    {{block.super}}    
-        <br>  
-        <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8" style="text-align: center;">
-                <div class="row" style="border-bottom:solid  #e4e4e4 0.01rem;">                    
-                    <div class="col">
-                        <a href="{% url 'projects' %}" style="color: black; text-decoration: none;"><i class="fas fa-th"></i></a>
-                    </div>
-                    <div class="col">
-                        <i class="fas fa-bars" style="color: #cbcaca;"></i>
-                    </div>
-                    <div class="col">
-                        <a href="{% url 'projectcollabs' %}" style="color: grey; text-decoration: none;"><i class="fas fa-id-card"></i></a>
-                    </div>   
-                    <br>                         
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="{% static 'css/projects.css' %}" rel="stylesheet"/>  
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="slide">
+            <div class="item" style="background-image: url(https://static.wixstatic.com/media/5498a7_53f09be587f0436fb9cf642b596bb779~mv2.png);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
                 </div>
             </div>
-            <div class="col-md-2"></div>
-        </div>                                
-        <div class="container containertab" id="gallery">
-            <br>
-            <div class="row">                                                
-                {% for project in projects%}
-                    <div class="col-md-4" style="padding: 5px;">                                                                                    
-                        <a href="{% url 'projectsdetail' project.id %}">
-                            <img class="card" style="height: 210px; width: 100%; box-shadow: 3px 6px 7px #797777; border: none;" src="{{project.projectimage1}}">
-                        </a>
-                    </div>                        
-                {% endfor %}                        
+            <div class="item" style="background-image: url(https://static.wixstatic.com/media/5498a7_94229fc0a5174619a5e9c1f8c07d46f5~mv2.png);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
             </div>
-        </div>                                    
-    <style>
-        #project2 {
-            border-bottom: solid 0.01rem #b5b5b5;
+            <div class="item" style="background-image: url(https://static.wixstatic.com/media/5498a7_b630d672d6b94ba6a087c303ae166906~mv2.png);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(https://static.wixstatic.com/media/5498a7_c514f0293be04b31aded7d324bb443de~mv2.png);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(https://static.wixstatic.com/media/5498a7_cc288cbe9c7d49aba62b866014a9b90e~mv2.jpg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+            <div class="item" style="background-image: url(https://static.wixstatic.com/media/5498a7_f8aa618bf14c4864980af3ae5a33134f~mv2.jpg);">
+                <div class="content">
+                    <div class="name">LUNDEV</div>
+                    <div class="des">Tinh ru anh di chay pho, chua kip chay pho thi anhchay mat tieu</div>
+                    <button>See more</button>
+                </div>
+            </div>
+        </div>
+        <div class="buttons">
+            <button id="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <button id="next"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </div>
+    <script>
+        document.getElementById('next').onclick = function(){
+            let lists = document.querySelectorAll('.item');
+            document.getElementById('slide').appendChild(lists[0]);
         }
-
-        #project1 {
-            font-weight: 600;
+        document.getElementById('prev').onclick = function(){
+            let lists = document.querySelectorAll('.item');
+            document.getElementById('slide').prepend(lists[lists.length - 1]);
         }
-    </style>
-    
-{% endblock %}
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
+  
